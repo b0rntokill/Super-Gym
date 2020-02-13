@@ -1,0 +1,24 @@
+@mixin breakpoint {
+  margin: 0 auto;
+  padding: 0 18.5%;
+
+  // Временно
+  @media (max-width: $desktop-width-max) {
+    padding: 0 7.5402%;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 0 5.859%;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 4.0625%;
+  }
+}
+
+@mixin font-setting($size, $line-height, $font-width, $color: $darknest-blue) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $font-width;
+  color: $color;
+}
