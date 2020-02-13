@@ -1,0 +1,404 @@
+.season-ticket {
+  background-color: $background-gray;
+}
+
+.season-ticket__wrapper {
+  display: flex;
+  flex-flow: column;
+  padding-top: 116px;
+  padding-bottom: 90px;
+
+  @media (min-width: 1450px) {
+    padding: 116px 7.5402% 90px 7.5402%;
+  }
+
+  @media (min-width: 1610px) {
+    padding: 116px 18.5% 90px 18.5%;
+  }
+}
+
+.season-ticket h2 {
+  margin: 0 0 118px 0;
+  padding: 0;
+  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+
+  @include font-setting(49px, 49px, normal, $darknest-blue);
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.season-ticket__slider {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.season-ticket__slider input {
+  &#slide1:checked ~ .season-ticket__pagination label:nth-of-type(1),
+  &#slide2:checked ~ .season-ticket__pagination label:nth-of-type(2),
+  &#slide3:checked ~ .season-ticket__pagination label:nth-of-type(3) {
+    color: $darknest-blue
+  }
+
+  &#slide1:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
+    width: 67px;
+  }
+
+  &#slide2:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
+    width: 199px;
+  }
+
+  &#slide3:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
+    width: 100%;
+  }
+
+  &#slide1:checked ~ .slide1,
+  &#slide2:checked ~ .slide2,
+  &#slide3:checked ~ .slide3 {
+    display: flex;
+  }
+
+}
+
+.season-ticket__slide {
+  display: none;
+  width: 100%;
+}
+
+.season-ticket__slide-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31.0344%;
+  height: 448px;
+  margin-bottom: 30px;
+  background: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+
+  &:not(:nth-of-type(3n)) {
+    margin-right: 3.4482%;
+  }
+}
+
+.season-ticket__ticket {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  padding: 56px 10px 62px;
+  box-shadow: 0 0 0 7px $white;
+  background: $white;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:hover a,
+  &:focus a {
+    color: $white;
+    box-shadow: none;
+    background-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+  }
+}
+
+.season-ticket__ticket h3 {
+  margin: 0 0 10px -2px;
+  padding: 0;
+  font-family: $default-font;
+
+  @include font-setting(26px, 29px, bold, $darknest-blue);
+
+  text-align: center;
+}
+
+.season-ticket__ticket b {
+  display: block;
+  margin: 0 0 64px -2px;
+  font-family: $default-font;
+
+  @include font-setting(16px, 24px, normal, #495a7d);
+
+  text-align: center;
+}
+
+.season-ticket__ticket p {
+  position: relative;
+  margin: 0 0 10px -3px;
+  padding: 0;
+  font-family: $default-font;
+
+  @include font-setting(60px, 90px, bold, #103aae);
+
+  text-align: center;
+  z-index: 0;
+
+  &::before {
+    content: attr(data-parent);
+    position: absolute;
+    top: -23px;
+    left: -30px;
+    width: 220px;
+    height: 90px;
+    color: $shadow-gray;
+    font-size: 100px;
+    z-index: -1;
+  }
+}
+
+.season-ticket__ticket a {
+  width: 206px;
+  margin-top: auto;
+  padding: 24px 15px;
+  font-family: $default-font;
+
+  @include font-setting(12px, 14px, bold, $darknest-blue);
+
+  box-shadow: 0 0 0 2px $darknest-blue;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  // Мне кажется без js не обойтись!
+  &:hover,
+  &:focus {
+    color: $white;
+    box-shadow: none;
+    background-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+  }
+}
+
+.season-ticket__pagination {
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  top: -81px;
+  left: 50%;
+  width: 380px;
+  transform: translateX(-50%); 
+}
+
+.season-ticket__pagination label {
+  width: 31%;
+  margin-bottom: 3%;
+  padding: 0 10px 0 5px;
+  font-family: $default-font;
+
+  @include font-setting(20px, 30px, normal, rgba(16, 38, 84, 0.5));
+
+  &:first-of-type {
+    padding-left: 18px;
+  }
+
+  &:not(:nth-of-type(3n)) {
+    margin-right: 3%;
+  }
+}
+
+.season-ticket__scrollbar {
+  position: absolute;
+  top: -40px;
+  left: 50%; 
+  width: 341px;
+  height: 2px;
+  background: rgba(120, 120, 120, 0.2);
+  transform: translateX(-50%); 
+}
+
+.season-ticket__scrollbar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 67px;
+  height: 100%;
+  background: #d10a42;
+}
+
+@media (max-width: $desktop-width) {
+  .season-ticket__wrapper {
+    display: flex;
+    flex-flow: column;
+    padding-top: 95px;
+    padding-bottom: 60px;
+  }
+
+  .season-ticket h2 {
+    margin: 0 0 118px 0;
+  
+    @include font-setting(42px, 42px, normal, $darknest-blue);
+  }
+
+  .season-ticket__slider {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .season-ticket__slider input {
+    &#slide1:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
+      width: 60px;
+    }
+  
+    &#slide2:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
+      width: 192px;
+    }
+  }
+
+  .season-ticket__slide {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .season-ticket__slide-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65.1917%;
+    height: 448px;
+    margin-bottom: 40px;
+  
+    &:not(:nth-of-type(3n)) {
+      margin-right: 0;
+    }
+  }
+
+  .season-ticket__ticket {
+    padding: 56px 68px 62px 69px;
+  }
+
+  .season-ticket__pagination {
+    top: -84px;
+  }
+
+  .season-ticket__pagination label {
+    padding: 0 10px 0 10px;
+
+    @include font-setting(18px, 27px, normal, $darknest-blue);
+
+    &:first-of-type {
+      padding-left: 24px;
+    }
+  }
+
+  .season-ticket__scrollbar {
+    top: -46px;
+    width: 332px;
+  }
+
+  .season-ticket__scrollbar-inner {
+    width: 60px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .season-ticket__wrapper {
+    padding-top: 68px;
+    padding-bottom: 35px;
+  }
+
+  .season-ticket h2 {
+    margin: 0 0 96px 0;
+
+    @include font-setting(32px, 32px, normal, $darknest-blue);
+  }
+
+  .season-ticket__slider {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 500px) {
+      width: 459px;
+      margin: 0 auto;
+    }
+  }
+
+  .season-ticket__slider input {
+    &#slide2:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
+      width: 167px;
+    }
+  }
+
+
+ .season-ticket__slide-inner {
+    width: 100%;
+    height: 384px;
+    margin-bottom: 35px;
+  }
+
+  .season-ticket__ticket {
+    padding: 44px 35px 49px;
+  }
+
+  .season-ticket__ticket h3 {
+    font-family: $default-font;
+  
+    @include font-setting(22px, 24px, bold, $darknest-blue);
+  }
+
+  .season-ticket__ticket b {
+    margin: 0 0 53px -2px;
+  }
+
+  .season-ticket__ticket p {
+    margin: 0 0 10px 1px;
+
+    @include font-setting(48px, 72px, bold, #103aae);
+  }
+
+  .season-ticket__ticket p svg {
+    width: 24px;
+    height: 33px;
+  }
+
+  .season-ticket__ticket a {
+    width: 206px;
+    margin-top: auto;
+    padding: 24px 15px;
+    font-family: $default-font;
+
+    @include font-setting(12px, 14px, bold, $darknest-blue);
+
+    box-shadow: 0 0 0 2px $darknest-blue;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    // Мне кажется без js не обойтись!
+    &:hover,
+    &:focus {
+      color: $white;
+      box-shadow: none;
+      background-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+    }
+  }
+
+  .season-ticket__pagination {
+    top: -73px;
+    width: 320px;
+  }
+
+  .season-ticket__pagination label {
+    padding: 0 5px 0 5px;
+
+    @include font-setting(16px, 24px, normal, $darknest-blue);
+
+    &:first-of-type {
+      padding-left: 14px;
+    }
+  }
+
+  .season-ticket__scrollbar {
+    top: -36px;
+    width: 290px;
+  }
+
+  .season-ticket__scrollbar-inner {
+    width: 60px;
+  }
+}
