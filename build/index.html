@@ -7,6 +7,7 @@
   <meta name="Description" content="Landing page Super Gym">
   <title>SUPER GYM FITNESS</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 <body>
   <div style="display: none;">
@@ -224,19 +225,24 @@
     </section>
     <section class="promo container">
       <div class="promo__title">
-        <div>
+        <div class="promo__description">
           <h2>Super Games</h2>
-          <p>
-            Дата
-            <span>
-              <b>7</b>
-              <span>Марта 2019</span>
-            </span>
-          </p>
-          <p>
-            Время
-            <b>12:00</b>
-          </p>
+          <div class="promo__date">
+            <div class="promo__date-inner">
+              <p>Дата</p>
+                <div>
+                  <b>7</b>
+                  <time>
+                    <span>Марта</span>
+                    <span>2019</span>
+                  </time>
+                </div>
+            </div>
+            <div class="promo__date-inner">
+              <p>Время</p>
+              <b>12:00</b>
+            </div>
+          </div>
         </div>
         <p>Ежегодные соревнования по CrossFit</p>
         <a href="#">заполнить заявку</a>
@@ -245,84 +251,164 @@
     </section>
     <section class="trainers container">
       <h2>Тренеры</h2>
-      <div class="trainers-slider">
-        <div class="trainers-slider__slide">
-          <img src="img/trainer-anna.jpg" alt="Изображение тренера Анны Павловой" width="260" height="294">
-          <p>Анна Павлова</p>
-          <div class="trainers-slider__inner">
-            <h3>Анна Павлова</h3>
-            <p>CrossFit</p>
-            <ul>
-              <li>
-                <p>Certified Level 3 Trainer</p>
-              </li>
-              <li>
-                <p>Победитель чемпионата России по CrossFit</p>
-              </li>
-              <li>
-                <p>Опыт — 6 лет</p>
-              </li>
-            </ul>
+      <div class="trainers__slider swiper-container">
+        <div class="trainers__slider-wrapper swiper-wrapper">
+          <div class="trainers__slide swiper-slide">
+            <img src="img/trainer-anna.jpg" alt="Изображение тренера Анны Павловой" width="260" height="294">
+            <p class="trainers__name">Анна Павлова</p>
+            <div class="trainers__slide-inner">
+              <p>Анна Павлова</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="trainers-slider__slide">
-          <img src="img/trainer-aleksey.jpg" alt="Изображение тренера Алексея Лаврова" width="260" height="294">
-          <p>Алексей Лавров</p>
-          <div class="trainers-slider__inner">
-            <h3>Алексей Лавров</h3>
-            <p>CrossFit</p>
-            <ul>
-              <li>
-                <p>Certified Level 3 Trainer</p>
-              </li>
-              <li>
-                <p>Победитель чемпионата России по CrossFit</p>
-              </li>
-              <li>
-                <p>Опыт — 6 лет</p>
-              </li>
-            </ul>
+          <div class="trainers__slide swiper-slide">
+            <img src="img/trainer-aleksey.jpg" alt="Изображение тренера Алексея Лаврова" width="260" height="294">
+            <p class="trainers__name">Алексей Лавров</p>
+            <div class="trainers__slide-inner">
+              <p>Алексей Лавров</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="trainers-slider__slide">
-          <img src="img/trainer-aleksandr.jpg" alt="Изображение тренера Александра Пашкова" width="260" height="294">
-          <p>Александр Пашков</p>
-          <div class="trainers-slider__inner">
-            <h3>Александр Пашков</h3>
-            <p>CrossFit</p>
-            <ul>
-              <li>
-                <p>Certified Level 3 Trainer</p>
-              </li>
-              <li>
-                <p>Победитель чемпионата России по CrossFit</p>
-              </li>
-              <li>
-                <p>Опыт — 6 лет</p>
-              </li>
-            </ul>
+          <div class="trainers__slide swiper-slide">
+            <img src="img/trainer-aleksandr.jpg" alt="Изображение тренера Александра Пашкова" width="260" height="294">
+            <p class="trainers__name">Александр Пашков</p>
+            <div class="trainers__slide-inner">
+              <p>Александр Пашков</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="trainers-slider__slide">
-          <img src="img/trainer-maria.jpg" alt="Изображение тренера Марии Кетовой" width="260" height="294">
-          <p>Мария Кетова</p>
-          <div class="trainers-slider__inner">
-            <h3>Мария Кетова</h3>
-            <p>CrossFit</p>
-            <ul>
-              <li>
-                <p>Certified Level 3 Trainer</p>
-              </li>
-              <li>
-                <p>Победитель чемпионата России по CrossFit</p>
-              </li>
-              <li>
-                <p>Опыт — 6 лет</p>
-              </li>
-            </ul>
+          <div class="trainers__slide swiper-slide">
+            <img src="img/trainer-maria.jpg" alt="Изображение тренера Марии Кетовой" width="260" height="294">
+            <p class="trainers__name">Мария Кетова</p>
+            <div class="trainers__slide-inner">
+              <p>Мария Кетова</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainers__slide swiper-slide">
+            <img src="img/trainer-aleksandr.jpg" alt="Изображение тренера Александра Пашкова" width="260" height="294">
+            <p class="trainers__name">Александр Пашков</p>
+            <div class="trainers__slide-inner">
+              <p>Александр Пашков</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainers__slide swiper-slide">
+            <img src="img/trainer-maria.jpg" alt="Изображение тренера Марии Кетовой" width="260" height="294">
+            <p class="trainers__name">Мария Кетова</p>
+            <div class="trainers__slide-inner">
+              <p>Мария Кетова</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainers__slide swiper-slide">
+            <img src="img/trainer-aleksey.jpg" alt="Изображение тренера Алексея Лаврова" width="260" height="294">
+            <p class="trainers__name">Алексей Лавров</p>
+            <div class="trainers__slide-inner">
+              <p>Алексей Лавров</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="trainers__slide swiper-slide">
+            <img src="img/trainer-anna.jpg" alt="Изображение тренера Анны Павловой" width="260" height="294">
+            <p class="trainers__name">Анна Павлова</p>
+            <div class="trainers__slide-inner">
+              <p>Анна Павлова</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+      <div class="trainers__slider-button-next"></div>
+      <div class="trainers__slider-button-prev"></div>
     </section>
     <section class="advantages">
       <div class="advantages__wrapper container">
@@ -495,6 +581,7 @@
       </ul>
     </div>
   </footer>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/vendor.js" type="module"></script>
   <script src="js/script.js"></script>
 </body>

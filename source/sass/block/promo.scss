@@ -1,0 +1,277 @@
+.promo {
+  display: flex;
+  flex-flow: row;
+  padding-top: 120px;
+  padding-bottom: 50px;
+
+  @media (min-width: 1450px) {
+    padding: 116px 7.5402% 90px 7.5402%;
+  }
+
+  @media (min-width: 1610px) {
+    padding: 116px 18.5% 90px 18.5%;
+  }
+}
+
+.promo__title {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 43.1034%;
+  padding: 78px 10px 86px;
+  background-color: $red;
+}
+
+.promo__title p {
+  margin: 0;
+  padding: 0;
+  width: 343px;
+  font-family: $default-font;
+
+  @include font-setting(18px, 27px, normal, $white);
+}
+
+.promo__title a {
+  width: 343px;
+  margin-top: auto;
+  padding: 24px 30px;
+  font-family: $default-font;
+
+  @include font-setting(12px, 14px, bold, $white);
+
+  border: 4px solid $white;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.promo__description {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 2px;
+}
+
+.promo__description h2 {
+  margin: 0 21px 0 0;
+  padding: 0;
+  width: 210px;
+  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+
+  @include font-setting(90px, 90px, normal, $white);
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.promo__date {
+  display: flex;
+  flex-flow: column;
+  width: 115px;
+  padding: 3px 0 0 20px;
+}
+
+.promo__date-inner {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 10px;
+}
+
+.promo__date-inner p {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: $default-font;
+
+  @include font-setting(18px, 27px, normal, $white);
+}
+
+.promo__date-inner span {
+  display: flex;
+  font-family: $default-font;
+
+  @include font-setting(14px, 21px, normal, $white);
+}
+
+.promo__date-inner b {
+  position: relative;
+  display: block;
+  margin-top: -2px;
+  margin-right: 6px;
+  font-family: $default-font;
+
+  @include font-setting(40px, 60px, bold, $white);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+  }
+}
+
+.promo__date-inner div {
+  position: relative;
+  display: flex;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+  }
+}
+
+.promo__date-inner time {
+  padding-top: 7px;
+}
+
+.promo img {
+  width: 56.8965%;
+  height: 500px;
+}
+
+@media (max-width: $desktop-width) {
+  .promo {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .promo__title {
+    width: 43.0678%; 
+    padding: 46px 10px 50px;
+  }
+
+  .promo__title p {
+    width: 202px;
+    @include font-setting(12px, 18px, normal, $white);
+  }
+
+  .promo__title a {
+    width: 202px;
+    padding: 12px 15px;
+
+    @include font-setting(10px, 12px, bold, $white);
+
+    border: 2px solid $white;
+  }
+
+  .promo__description {
+    margin-bottom: 3px;
+
+    @media (min-width: 950px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .promo__description h2 {
+    margin: 0 21px 0 0;
+    width: 120px;
+  
+    @include font-setting(52px, 52px, normal, $white);
+  }
+
+  .promo__date {
+    width: 60px;
+    padding: 0 0 0 5px;
+  }
+
+  .promo__date-inner {
+    margin-bottom: 0;
+  }
+
+  .promo__date-inner p {
+    @include font-setting(12px, 18px, normal, $white);
+  }
+
+  .promo__date-inner span {
+    @include font-setting(10px, 15px, normal, $white);
+  }
+
+  .promo__date-inner b {
+    margin-right: 4px;
+  
+    @include font-setting(24px, 36px, bold, $white);
+  
+    &::after {
+      top: 4px;
+    }
+  }
+
+  .promo__date-inner div {
+    &::after {
+      top: 2px;
+    }
+  }
+  
+  .promo__date-inner time {
+    padding-top: 3px;
+  }
+  
+  .promo img {
+    width: 56.9321%;
+    height: 292px;
+
+    @media (min-width: 950px) {
+      height: 359px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .promo {
+    flex-flow: column;
+    padding-top: 70px;
+    padding-bottom: 50px;
+
+    @media (min-width: 500px) {
+      width: 500px;
+    }
+  }
+
+  .promo__title {
+    width: 100%; 
+    padding: 46px 10px 49px;
+  }
+
+  .promo__title a {
+    margin-top: 30px;
+  }
+
+  .promo__description {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .promo__description h2 {
+    margin: 0 21px 0 0;
+    width: 120px;
+  
+    @include font-setting(52px, 52px, normal, $white);
+  }
+
+  .promo__date{
+    padding-left: 5px;
+  }
+
+  .promo__date-inner b {
+    margin-top: -1px;
+  
+    &::after {
+      top: 3px;
+    }
+  }
+  
+  .promo img {
+    width: 100%;
+    height: 292px;
+  }
+}
