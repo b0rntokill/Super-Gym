@@ -1,0 +1,405 @@
+.advantages {
+  background-color: $background-gray;
+}
+
+.advantages__wrapper {
+  padding-top: 116px;
+  padding-bottom: 123px;
+  width: 100%;
+
+  @media (max-width: 1365px) {
+    padding-left: 2.6%;
+    padding-right: 2.6%;
+  }
+
+  @media (min-width: 1450px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.advantages__wrapper h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+
+  @include font-setting(49px, 49px, normal, $darknest-blue);
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages__inner {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 64px 60px 40px 60px;
+
+  @media (min-width: 1365px) {
+    width: 1160px;
+    margin: 0 auto;
+  }
+}
+
+.advantages__inner ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__inner-item {
+  display: flex;
+  flex-flow: row wrap;
+  width: 32.6923%;
+  min-height: 161px;
+
+  &:nth-of-type(even) {
+    margin-left: 34.6154%;
+  }
+  // Для переполнения
+  &:nth-of-type(odd) {
+    margin-right: auto;
+  }
+
+  &--layout-shift {
+    align-items: flex-end;
+    padding-bottom: 2px;
+    border-top: 2px solid rgba(209, 10, 66, 0.2);
+  }
+
+  &--designer-mistake-900 {
+    padding-left: 27px;
+  }
+
+  &--designer-mistake-350 {
+    padding-left: 20px;
+  }
+}
+
+.advantages__facts-short {
+  display: flex;
+  flex-flow: column;
+  width: 29.4117%;
+  margin: 0;
+  margin-right: 0.5882%;
+  padding: 0;
+
+  &--layout-shift {
+    width: 35.2941%;
+    margin-right: 8.4%;
+  }
+}
+
+.advantages__facts-short b {
+  display: block;
+  margin-top: -21px;
+  font-family: $default-font;
+
+  @include font-setting(71px, 106px, bold, #2e35ac);
+
+  background: linear-gradient(150deg, #d10e0a 11%, #0041ca 50%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  word-wrap: break-word;
+}
+
+.advantages__facts-short span {
+  margin-top: -22px;
+  font-family: $default-font;
+
+  @include font-setting(14px, 21px, normal, #2e35ac);
+
+  word-wrap: break-word;
+}
+
+.advantages__facts {
+  display: flex;
+  flex-flow: column;
+  width: 69.7058%;
+  margin: 0;
+  padding: 0;
+
+  &--layout-shift {
+    width: 56%;
+  }
+
+  &--layout-shift span {
+    letter-spacing: -0.02em;
+  }
+}
+
+.advantages__facts b {
+  margin-bottom: 6px;
+  font-family: $default-font;
+
+  @include font-setting(22px, 33px, bold, $darknest-blue);
+
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.advantages__facts span {
+  font-family: $default-font;
+
+  @include font-setting(16px, 22px, normal, $darknest-blue);
+
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.advantages__special {
+  position: absolute;
+  top: 72px;
+  left: 50%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  width: 20.6896%;
+  // Если хотим адаптировать его под контейнер списка, то от высоты 100% вычитаем последовательно
+  //  72 (то на сколько его сдвинули от верха элемента в котором он спозиционирован)
+  // 40 (отступ снизу у advantages__inner) и 6 (это сдвиг снизу от границ списка согласно макета)
+  // Магия, теперь можно добавлять элементы списка, все будет хорошо
+  height: calc(100% - 72px - 40px - 6px);
+  padding: 36px 34px 60px;
+  background-color: $blue;
+  transform: translateX(-50%);
+}
+
+.advantages__special b {
+  font-family: $default-font;
+
+  @include font-setting(74px, 111px, bold, $white);
+
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.advantages__special span {
+  margin: -16px 0 30px;
+
+  font-family: $default-font;
+
+  @include font-setting(26px, 39px, bold, $white);
+
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.advantages__special p {
+  margin: 0;
+  padding: 0;
+  font-family: $default-font;
+
+  @include font-setting(16px, 24px, normal, $white);
+
+  text-align: center;
+  word-wrap: break-word;
+}
+
+@media (max-width: $desktop-width) {
+  .advantages__wrapper {
+    padding-top: 96px;
+    padding-bottom: 9px;
+  }
+
+  .advantages__wrapper h2 {
+    @include font-setting(42px, 42px, normal, $darknest-blue);
+  }
+
+  .advantages__inner {
+    padding: 46px 24px 40px 25px;
+  }
+
+  .advantages__inner-item {
+    width: 48%;
+    min-height: 120px;
+
+    &:nth-of-type(even) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(odd) {
+      margin-right: 4%;
+    }
+
+    &:nth-of-type(n + 3) {
+      margin-top: 282px;
+    }
+
+    &--layout-shift {
+      align-items: flex-start;
+      padding-bottom: 0;
+      border-top: none;
+    }
+
+    &--designer-mistake-900 {
+      padding-left: 0;
+    }
+
+    &--designer-mistake-350 {
+      padding-left: 0;
+    }
+  }
+
+  .advantages__facts-short {
+    margin-right: 0;
+
+    &--layout-shift {
+      width: 35.2941%;
+      margin-right: 0.6134%;
+    }
+  }
+
+  .advantages__facts-short b {
+    margin-top: -15px;
+    padding-right: 6.1349%;
+
+    @include font-setting(58px, 87px, bold, #2e35ac);
+  }
+
+  .advantages__facts-short span {
+    margin-top: -17px;
+  }
+
+  .advantages__facts {
+    // опять ошибки дизайнера, плюс потенциально создается ситуация, со слипанием текста. Выше я ее пытаюсь предотвратить
+    margin-left: -8px;
+
+    &--layout-shift {
+      margin-left: 0;
+    }
+
+    &--layout-shift span {
+      letter-spacing: 0;
+    }
+  }
+
+  .advantages__facts b {
+    margin-bottom: 2px;
+
+    @include font-setting(20px, 30px, bold, $darknest-blue);
+  }
+
+  .advantages__facts span {
+    letter-spacing: -0.015em;
+  }
+
+  .advantages__special {
+    justify-content: flex-start;
+    top: 166px;
+    width: 60.7142%;
+    height: 239px;
+    padding: 12px 128px 24px;
+  }
+
+  .advantages__special b {
+    margin: 0 0 0 -3px;
+
+    @include font-setting(74px, 111px, bold, $white);
+  }
+
+  .advantages__special span {
+    margin: -18px 0 14px;
+
+    @include font-setting(22px, 33px, bold, $white);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .advantages__wrapper {
+    padding-top: 67px;
+    padding-bottom: 3px;
+  }
+
+  .advantages__wrapper h2 {
+    @include font-setting(32px, 32px, normal, $darknest-blue);
+  }
+
+  .advantages__inner {
+    padding: 32px 24px 40px 25px;
+  }
+
+  .advantages__inner-item {
+    flex-flow: column;
+    width: 100%;
+    min-height: 191px;
+
+    &:nth-of-type(even) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(odd) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(n + 3) {
+      margin-top: 0;
+    }
+
+    &:nth-of-type(2n + 3) {
+      margin-top: 291px;
+    }
+  }
+
+  .advantages__facts-short {
+    width: 100%;
+    margin-bottom: 5px;
+
+    &--layout-shift {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .advantages__facts-short b {
+    margin-top: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .advantages__facts-short span {
+    margin-top: -18px;
+    text-align: center;
+  }
+
+  .advantages__facts {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 15px;
+  }
+
+  .advantages__facts b {
+    margin-bottom: 2px;
+    text-align: center;
+  }
+
+  .advantages__facts span {
+    text-align: center;
+  }
+
+  .advantages__special {
+    top: 439px;
+    width: calc(100% + 5.4785%);
+    padding: 20px 74px 24px;
+  }
+
+  .advantages__special b {
+    margin: 0 0 0 -3px;
+
+    @include font-setting(74px, 111px, bold, $white);
+  }
+
+  .advantages__special span {
+    margin: -24px 0 9px;
+
+    @include font-setting(22px, 33px, bold, $white);
+  }
+}

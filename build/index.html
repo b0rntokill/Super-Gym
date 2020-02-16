@@ -251,9 +251,9 @@
     </section>
     <section class="trainers container">
       <h2>Тренеры</h2>
-      <div class="trainers__slider swiper-container">
-        <div class="trainers__slider-wrapper swiper-wrapper">
-          <div class="trainers__slide swiper-slide">
+      <div class="trainers__slider">
+        <ul class="trainers__slider-wrapper swiper-wrapper">
+          <li class="trainers__slide swiper-slide">
             <img src="img/trainer-anna.jpg" alt="Изображение тренера Анны Павловой" width="260" height="294">
             <p class="trainers__name">Анна Павлова</p>
             <div class="trainers__slide-inner">
@@ -271,8 +271,8 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="trainers__slide swiper-slide">
+          </li>
+          <li class="trainers__slide swiper-slide">
             <img src="img/trainer-aleksey.jpg" alt="Изображение тренера Алексея Лаврова" width="260" height="294">
             <p class="trainers__name">Алексей Лавров</p>
             <div class="trainers__slide-inner">
@@ -290,8 +290,8 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="trainers__slide swiper-slide">
+          </li>
+          <li class="trainers__slide swiper-slide">
             <img src="img/trainer-aleksandr.jpg" alt="Изображение тренера Александра Пашкова" width="260" height="294">
             <p class="trainers__name">Александр Пашков</p>
             <div class="trainers__slide-inner">
@@ -309,8 +309,8 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="trainers__slide swiper-slide">
+          </li>
+          <li class="trainers__slide swiper-slide">
             <img src="img/trainer-maria.jpg" alt="Изображение тренера Марии Кетовой" width="260" height="294">
             <p class="trainers__name">Мария Кетова</p>
             <div class="trainers__slide-inner">
@@ -328,8 +328,8 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="trainers__slide swiper-slide">
+          </li>
+          <li class="trainers__slide swiper-slide">
             <img src="img/trainer-aleksandr.jpg" alt="Изображение тренера Александра Пашкова" width="260" height="294">
             <p class="trainers__name">Александр Пашков</p>
             <div class="trainers__slide-inner">
@@ -347,8 +347,8 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="trainers__slide swiper-slide">
+          </li>
+          <li class="trainers__slide swiper-slide">
             <img src="img/trainer-maria.jpg" alt="Изображение тренера Марии Кетовой" width="260" height="294">
             <p class="trainers__name">Мария Кетова</p>
             <div class="trainers__slide-inner">
@@ -366,8 +366,8 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="trainers__slide swiper-slide">
+          </li>
+          <li class="trainers__slide swiper-slide">
             <img src="img/trainer-aleksey.jpg" alt="Изображение тренера Алексея Лаврова" width="260" height="294">
             <p class="trainers__name">Алексей Лавров</p>
             <div class="trainers__slide-inner">
@@ -385,8 +385,8 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="trainers__slide swiper-slide">
+          </li>
+          <li class="trainers__slide swiper-slide">
             <img src="img/trainer-anna.jpg" alt="Изображение тренера Анны Павловой" width="260" height="294">
             <p class="trainers__name">Анна Павлова</p>
             <div class="trainers__slide-inner">
@@ -404,101 +404,121 @@
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
-      <div class="trainers__slider-button-next"></div>
-      <div class="trainers__slider-button-prev"></div>
+      <span class="trainers__slider-button-next"></span>
+      <span class="trainers__slider-button-prev"></span>
     </section>
     <section class="advantages">
       <div class="advantages__wrapper container">
         <h2>Наши преимущества</h2>
         <div class="advantages__inner">
           <ul>
-            <li>
-              <p>
+            <li class="advantages__inner-item advantages__inner-item--designer-mistake-900">
+              <p class="advantages__facts-short advantages__facts-short--layout-shift">
                 <b>900</b>
                 <span>кв/м</span>
               </p>
-              <p>
+              <p class="advantages__facts advantages__facts--layout-shift">
                 <b>Площадь</b>
                 <span>Занимайтесь без очередей и толпучки</span>
               </p>
             </li>
-            <li>
-              <p>
-                <b>350</b>
-                <span>мест</span>
-              </p>
-              <p>
-                <b>Комфорт</b>
-                <span>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</span>
-              </p>
-            </li>
-          </ul>
-          <p>
-            <b>100</b>
-            <b>Тренажеров</b>
-            <span>Современные тренажеры на все группы мышц</span>
-          </p>
-          <ul>
-            <li>
-              <p>
+            <li class="advantages__inner-item">
+              <p class="advantages__facts-short">
                 <b>70</b>
                 <span>машин</span>
               </p>
-              <p>
+              <p class="advantages__facts">
                 <b>Собственная парковка</b>
                 <span>Вы всегда найдете место для своей машины на нашей парковке</span>
               </p>
             </li>
-            <li>
-              <p>
+            <li class="advantages__inner-item advantages__inner-item--layout-shift advantages__inner-item--designer-mistake-350">
+              <p class="advantages__facts-short advantages__facts-short--layout-shift">
+                <b>350</b>
+                <span>мест</span>
+              </p>
+              <p class="advantages__facts advantages__facts--layout-shift">
+                <b>Комфорт</b>
+                <span>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</span>
+              </p>
+            </li>
+            <li class="advantages__inner-item advantages__inner-item--layout-shift">
+              <p class="advantages__facts-short">
                 <b>5+</b>
                 <span>лет</span>
               </p>
-              <p>
+              <p class="advantages__facts">
                 <b>Тренерский опыт</b>
                 <span>Добивайтесь своих целей быстрее с профессиональным тренером</span>
               </p>
             </li>
           </ul>
+          <div class="advantages__special">
+            <b>100</b>
+            <span>Тренажеров</span>
+            <p>Современные тренажеры на все группы мышц</p>
+          </div>
         </div>
       </div>
     </section>
     <section class="stocks container">
       <h2>Акции</h2>
-      <div>
-        <p>
-          <b>Год</b>
-          <b>4999</b>
-          </p><p>Безлимитный абонемент в тренажерный зал</p>
-          <a href="#">подробнее</a>
-        <p></p>
-        <img src="img/stock-girl.jpg" alt="Изображение девушки в леггинсах с эффектом push-up" width="280" height="462">
+      <div class="stocks__inner">
+        <div class="stocks__year-promo">
+          <div>
+            <span>Год</span>
+            <b>4999</b>
+            <p>Безлимитный абонемент в тренажерный зал</p>
+            <a href="#">подробнее</a>
+          </div>
+          <img src="img/stock-girl.jpg" alt="Изображение девушки в леггинсах с эффектом push-up" width="280" height="462">
+        </div>
+        <ul>
+          <li>
+            <b>Месяц бесплатно</b>
+            <p>Приведи друга, получи абонемент в подарок</p>
+            <a href="#">подробнее</a>
+          </li>
+          <li>
+            <b>Скидка 20%</b>
+            <p>Корпоративный фитнес с&nbsp;командой</p>
+            <a href="#">подробнее</a>
+          </li>
+        </ul>
       </div>
-      <ul>
-        <li>
-          <strong>Месяц бесплатно</strong>
-          <p>Приведи друга, получи абонемент в подарок</p>
-          <a href="#">подробнее</a>
-        </li>
-        <li>
-          <strong>Скидка 20%</strong>
-          <p>Корпоративный фитнес с командой</p>
-          <a href="#">подробнее</a>
-        </li>
-      </ul>
     </section>
     <section class="reviews container">
       <h2>Отзывы</h2>
-      <div class="reviews-slider"></div>
-        <div class="reviews-slider__slide">
-          <img src="img/girl-avatar.png" alt="Аватар пользователя" width="80" height="80">
-          <b>Анна Орлова</b>
-          <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-        </div>
-      
+      <div class="reviews__slider">
+        <ul class="reviews__slider-wrapper swiper-wrapper">
+          <li class="reviews__slider-slide swiper-slide">
+            <img src="img/girl-avatar.png" alt="Аватар пользователя" width="80" height="80">
+            <div>
+              <b>Анна Орлова</b>
+              <p>«Хожу в SuperClub уже больше года. Нравится, что&nbsp;в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал&nbsp;просторный, даже в вечернее время нет очередей»</p>
+            </div>
+          </li>
+          <li class="reviews__slider-slide swiper-slide">
+            <img src="img/girl-avatar.png" alt="Аватар пользователя" width="80" height="80">
+            <div>
+              <b>Руки Базуки</b>
+              <p>«Хожу в SuperClub уже больше недели. Зал просторный, даже в вечернее время. Кому мою коронную двоечку?»</p>
+            </div>
+          </li>
+          <li class="reviews__slider-slide swiper-slide">
+            <img src="img/girl-avatar.png" alt="Аватар пользователя" width="80" height="80">
+            <div>
+              <b>Борат Сагдиев</b>
+              <p>«Нраица, ходи сюда, делай то! Какой важный курица!»</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <span class="reviews__slider-button-next"></span>
+      <span class="reviews__slider-button-prev"></span>
     </section>
     <section class="feedback">
     <h2 class="visually-hidden">Свяжитесь с нами!</h2>
@@ -582,7 +602,7 @@
     </div>
   </footer>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <script src="js/vendor.js" type="module"></script>
+  <script src="js/vendor.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

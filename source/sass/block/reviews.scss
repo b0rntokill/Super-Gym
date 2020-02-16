@@ -1,0 +1,247 @@
+.reviews {
+  position: relative;
+  padding-top: 42px;
+  padding-bottom: 60px;
+}
+
+.reviews h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+
+  @include font-setting(49px, 49px, normal, $darknest-blue);
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.reviews__slider {
+  display: flex;
+  flex-flow: row;
+  width: 560px;
+  min-height: 242px;
+  padding: 54px 0 0 0;
+  // Стили для свайпера
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.reviews__slider-wrapper {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.reviews__slider-slide {
+  display: flex;
+  flex-flow: row wrap;
+  width: 560px;
+  min-height: 242px;
+  margin: 0 auto;
+  padding: 52px 50px 40px 62px;
+  background-color: $blue;
+  box-sizing: border-box;
+}
+
+.reviews__slider-slide img {
+  margin-top: 10px;
+  margin-right: 27px;
+}
+
+.reviews__slider-slide div {
+  width: 330px;
+}
+
+.reviews__slider-slide b {
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 12px;
+  font-family: $default-font;
+
+  @include font-setting(20px, 30px, bold, $white);
+}
+
+.reviews__slider-slide p {
+  margin: 0;
+  padding: 0;
+  font-family: $default-font;
+
+  @include font-setting(16px, 22px, normal, $white);
+}
+
+.reviews__slider-button-next {
+  position: absolute;
+  top: 57%;
+  right: 25.8%;
+  width: 24px;
+  height: 24px;
+  border-right: 1px solid #afafaf;
+  border-bottom: 1px solid #afafaf;
+  transform: rotate(-45deg);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $darknest-blue;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (max-width: 1280px) {
+    right: 23%;
+  }
+}
+
+.reviews__slider-button-prev {
+  position: absolute;
+  top: 57%;
+  left: 25.8%;
+  width: 24px;
+  height: 24px;
+  border-left: 1px solid #afafaf;
+  border-bottom: 1px solid #afafaf;
+  transform: rotate(45deg);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $darknest-blue;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (max-width: 1280px) {
+    left: 23%;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .reviews {
+    padding-top: 46px;
+    padding-bottom: 50px;
+  }
+
+  .reviews h2 {
+    @include font-setting(42px, 42px, normal, $darknest-blue);
+  }
+
+  .reviews__slider {
+    width: 566px;
+    padding: 44px 0 0 0;
+  }
+
+  .reviews__slider-wrapper {
+    width: 566px;
+  }
+
+  .reviews__slider-slide {
+    width: 566px;
+    padding: 52px 50px 40px 65px;
+  }
+
+  .reviews__slider-button-next {
+    top: 57%;
+    right: 6.5%;
+
+    @media (min-width: 950px) {
+      right: 16%;
+    }
+  }
+
+  .reviews__slider-button-prev {
+    top: 57%;
+    left: 6.5%;
+
+    @media (min-width: 950px) {
+      left: 16%;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .reviews {
+    padding-top: 47px;
+    padding-bottom: 30px;
+  }
+
+  .reviews h2 {
+    @include font-setting(32px, 32px, normal, $darknest-blue);
+  }
+
+  .reviews__slider {
+    width: 226px;
+    padding: 45px 0 0 0;
+  }
+
+  .reviews__slider-wrapper {
+    width: 226px;
+  }
+
+  .reviews__slider-slide {
+    flex-flow: column;
+    width: 226px;
+    min-height: 335px;
+    padding: 40px 15px 30px;
+  }
+
+  .reviews__slider-slide img {
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: 26px;
+    width: 68px;
+    height: 68px;
+  }
+  
+  .reviews__slider-slide div {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin-top: -60px;
+  }
+  
+  .reviews__slider-slide b {
+    width: 86px;
+    margin: 0 0 23px auto; 
+  
+    @include font-setting(20px, 26px, normal, $white);
+
+    text-align: left;
+  }
+
+  .reviews__slider-slide p {
+    text-align: center;
+  }
+
+  .reviews__slider-button-next {
+    top: 58.15%;
+    right: 6%;
+    width: 14px;
+    height: 14px;
+
+    @media (min-width: 500px) {
+      right: 16%;
+    }
+  }
+
+  .reviews__slider-button-prev {
+    top: 58.15%;
+    left: 6%;
+    width: 14px;
+    height: 14px;
+
+    @media (min-width: 500px) {
+      left: 16%;
+    }
+  }
+}

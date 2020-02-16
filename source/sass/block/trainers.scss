@@ -19,12 +19,21 @@
   display: flex;
   flex-flow: row;
   width: 100%;
+  // Стили необходимые свайперу
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .trainers__slider-wrapper {
   display: flex;
   flex-flow: row;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .trainers__slide {
