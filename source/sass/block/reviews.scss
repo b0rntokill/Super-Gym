@@ -202,18 +202,18 @@
     width: 68px;
     height: 68px;
   }
-  
+
   .reviews__slider-slide div {
     display: flex;
     flex-flow: column;
     width: 100%;
     margin-top: -60px;
   }
-  
+
   .reviews__slider-slide b {
     width: 86px;
-    margin: 0 0 23px auto; 
-  
+    margin: 0 0 23px auto;
+
     @include font-setting(20px, 26px, normal, $white);
 
     text-align: left;

@@ -1,11 +1,7 @@
 @mixin breakpoint {
+  // width: $fixed-width;
   margin: 0 auto;
-  padding: 0 18.5%;
-
-  // Временно
-  @media (max-width: $desktop-width-max) {
-    padding: 0 7.5402%;
-  }
+  padding: 0 7.5402%;
 
   @media (max-width: $desktop-width) {
     padding: 0 5.859%;

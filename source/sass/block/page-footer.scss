@@ -1,0 +1,281 @@
+.page-footer {
+  padding-top: 42px;
+  padding-bottom: 16px;
+  background-color: $footer-black;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.page-footer__logo {
+  width: 12.9310%;
+  margin-right: 16.8103%;
+  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+
+  @include font-setting(26px, 26px, normal, $white);
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 46%;
+  margin: 0;
+  padding: 5px 0 0;
+  list-style: none;
+}
+
+.page-footer__nav-item {
+  display: flex;
+  width: min-content;
+  margin: 0 20px 20px;
+
+  &:last-of-type {
+    flex-grow: 1;
+  }
+}
+
+.page-footer__nav a {
+  max-width: 74px;
+  font-family: $default-font;
+
+  @include font-setting(14px, 16px, normal, $white);
+  word-wrap: break-word;
+  text-transform: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__social-list {
+  display: flex;
+  flex-flow: row wrap;
+  width: 130px;
+  margin: 0 0 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.page-footer__social-item {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  width: 24px;
+  margin-bottom: 22px;
+
+  &:not(:nth-of-type(3n)) {
+    margin-left: 22px;
+  }
+
+  &:nth-of-type(3n) {
+    margin-left: 14px;
+  }
+
+  &--vk {
+    padding-top: 2px;
+  }
+}
+
+.page-footer__social-item svg {
+  fill: $white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .page-footer {
+    padding-top: 44px;
+    padding-bottom: 21px;
+  }
+
+  .page-footer__logo {
+    width: 120px;
+    margin-right: auto;
+
+    @include font-setting(24px, 24px, normal, $white);
+  }
+
+  .page-footer__nav {
+    width: 62%;
+    padding: 6px 0 0;
+
+    @media (min-width: 769px) {
+      justify-content: center;
+    }
+  }
+
+  .page-footer__nav-item {
+    margin: 0 15px 15px;
+  }
+
+  .page-footer__social-list {
+    width: 120px;
+  }
+
+  .page-footer__social-item {
+    width: 24px;
+    padding-top: 1px;
+    margin-bottom: 20px;
+
+    &:not(:nth-of-type(3n)) {
+      margin-left: 19px;
+    }
+
+    &:nth-of-type(3n) {
+      margin-left: 10px;
+    }
+
+    &--vk {
+      padding-top: 3px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-footer {
+    padding-top: 48px;
+    padding-bottom: 20px;
+  }
+
+  .page-footer__wrapper {
+    flex-flow: column;
+
+    @media (min-width: 400px) {
+      width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  .page-footer__logo {
+    width: 100%;
+    margin-right: 0;
+    padding-right: 70.4697%;
+
+    @include font-setting(20px, 20px, normal, $white);
+  }
+
+  .page-footer__nav {
+    width: 100%;
+    margin-top: -18px;
+    margin-bottom: 14px;
+    padding: 0 0 0 2px;
+  }
+
+  .page-footer__nav-item {
+    width: 46%;
+    margin: 0 0 20px;
+
+    &:nth-of-type(even) {
+      margin-right: 8%;
+    }
+
+    &:nth-of-type(odd) {
+      padding-left: 3px;
+    }
+
+    &--stocks {
+      order: -3;
+      margin-left: 53.0201%;
+    }
+
+    &--services:nth-of-type(even) {
+      margin-right: 8%;
+      padding-left: 0;
+    }
+
+    &--services {
+      order: -2;
+    }
+
+    &--trainers:nth-of-type(even) {
+      margin-right: 0;
+      margin-left: 8%;
+      padding-left: 0;
+    }
+
+    &--trainers {
+      order: -1;
+      margin-right: 0;
+    }
+  }
+
+  .page-footer__nav a {
+    max-width: 100%;
+
+    @include font-setting(16px, 19px, normal, $white);
+  }
+
+  .page-footer__social-list {
+    width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 3px;
+  }
+
+  .page-footer__social-item {
+    width: 32px;
+    padding-top: 1px;
+    margin-right: 28px;
+    margin-bottom: 28px;
+
+    &:not(:nth-of-type(3n)) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(3n) {
+      margin-left: 0;
+    }
+
+    &--vk {
+      padding-top: 7px;
+    }
+
+    &--fb {
+      padding-right: 9px;
+    }
+
+    &--vk svg {
+      width: 37px;
+      height: 17px;
+    }
+
+    &--ig svg {
+      width: 27px;
+      height: 27px;
+    }
+
+    &--fb svg {
+      width: 14px;
+      height: 27px;
+    }
+  }
+}

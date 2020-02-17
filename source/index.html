@@ -14,28 +14,30 @@
     <include src="build/img/sprite_auto.svg"></include>
   </div>
   <header class="page-header container">
-    <ul class="page-header__top">
-      <li class="page-header__top-item"><a>Supergym</a></li>
-      <li class="page-header__top-item page-header__top-item--phone"><a href="tel:+88005555555">8-800-555-55-55</a></li>
-    </ul>
-    <div class="page-header__title">
-      <span>Омск</span>
-      <b>Фитнес центр</b>
-      <ul>
-        <li><p>Тренажёрный зал</p></li>
-        <li><p>Групповые занятия</p></li>
-        <li><p>Кардио-зона</p></li>
+    <!-- <div class="page-header_wrapper"> -->
+      <ul class="page-header__top">
+        <li class="page-header__top-item"><a>Supergym</a></li>
+        <li class="page-header__top-item page-header__top-item--phone"><a href="tel:+88005555555">8-800-555-55-55</a></li>
       </ul>
-      <a href="#">
-        <span>Купить абонемент</span>
-      </a>
-    </div>
-    <img src="img/sportsman.jpg" alt="Изображение члена нашего клуба" width="500" height="556">
-    <ul class="page-header__social">
-      <li><a href="#">FB</a></li>
-      <li><a href="#">VK</a></li>
-      <li><a href="#">IG</a></li>
-    </ul>
+      <div class="page-header__title">
+        <span>Омск</span>
+        <b>Фитнес центр</b>
+        <ul>
+          <li><p>Тренажёрный зал</p></li>
+          <li><p>Групповые занятия</p></li>
+          <li><p>Кардио-зона</p></li>
+        </ul>
+        <a href="#">
+          <span>Купить абонемент</span>
+        </a>
+      </div>
+      <img src="img/sportsman.jpg" alt="Изображение члена нашего клуба" width="500" height="556">
+      <ul class="page-header__social">
+        <li><a href="#">FB</a></li>
+        <li><a href="#">VK</a></li>
+        <li><a href="#">IG</a></li>
+      </ul>
+    <!-- </div> -->
   </header>
   <main>
     <section class="gym container">
@@ -513,7 +515,7 @@
     <div class="feedback__lesson">
       <h3>Бесплатное занятие</h3>
       <form class="feedback__lesson-form" action="#" method="get">
-        <input  id="user-name" name="user-name" type="text" placeholder="Имя" pattern="([A-Za-z ]{3,30}$)|([А-Яа-я ]{3,30}$)" required>
+        <input id="user-name" name="user-name" type="text" placeholder="Имя" pattern="([A-Za-z ]{3,30}$)|([А-Яа-я ]{3,30}$)" required>
         <input id="user-tel" name="user-tel" type="tel" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
         <button type="submit">отправить</button>
       </form>
@@ -521,19 +523,19 @@
     <div class="feedback__contacts">
       <h3>Контакты</h3>
       <ul>
-        <li>
+        <li class="feedback__item feedback__item--address">
           <b>Адрес:</b>
-          <address>г. Мытищи, Олимпийский проспект, д.10</address>
+          <address>г. Омск, ул. 60 лет Октября, 7</address>
         </li>
-        <li>
+        <li class="feedback__item">
           <b>Телефон:</b>
           <a href="tel:+88005555555">8-800-555-55-55</a>
         </li>
-        <li>
+        <li class="feedback__item feedback__item--schedule">
           <b>График работы:</b>
           <p>Пн-Вс: с 8:00 до 22:00</p>
         </li>
-        <li>
+        <li class="feedback__item">
           <b>Email:</b>
           <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
         </li>
@@ -543,26 +545,26 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper container">
-      <a href="#">Supergym</a>
-      <ul>
-        <li>
+      <a class="page-footer__logo" href="#">Supergym</a>
+      <ul class="page-footer__nav">
+        <li class="page-footer__nav-item page-footer__nav-item--services">
           <a href="#">Услуги</a>
         </li>
-        <li>
+        <li class="page-footer__nav-item page-footer__nav-item--season-ticket">
           <a href="#">Абонементы</a>
         </li>
-        <li>
+        <li class="page-footer__nav-item page-footer__nav-item--stocks">
           <a href="#">Акции</a>
         </li>
-        <li>
+        <li class="page-footer__nav-item page-footer__nav-item--trainers">
           <a href="#">Тренеры</a>
         </li>
-        <li>
+        <li class="page-footer__nav-item">
           <a href="#">Расписание</a>
         </li>
       </ul>
-      <ul>
-        <li>
+      <ul class="page-footer__social-list">
+        <li class="page-footer__social-item page-footer__social-item--vk">
           <a href="#">
             <svg width="24" height="13">
               <use xlink:href="#icon-vk"></use>
@@ -570,7 +572,7 @@
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
-        <li>
+        <li class="page-footer__social-item page-footer__social-item--ig">
           <a href="#">
             <svg width="24" height="24">
               <use xlink:href="#icon-ig"></use>
@@ -578,7 +580,7 @@
             <span class="visually-hidden">Инстаграм</span>
           </a>
         </li>
-        <li>
+        <li class="page-footer__social-item page-footer__social-item--fb">
           <a href="#">
             <svg width="12" height="24">
               <use xlink:href="#icon-fb"></use>
@@ -590,7 +592,7 @@
     </div>
   </footer>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <script src="js/vendor.js"></script>
+  <script src="js/vender.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
