@@ -1,7 +1,9 @@
 .feedback {
   display: flex;
   flex-flow: row;
-  padding-top: 60px;
+  margin-top: 60px;
+  border-top: 1px solid #74819C;
+  background-image: linear-gradient(90deg, $darknest-blue 0%, $darknest-blue 50%, $white 50%, $white 100%);
 }
 
 .feedback__lesson {
@@ -9,10 +11,15 @@
   flex-flow: column;
   width: 50%;
   padding: 58px 12.4450% 50px 7.5402%;
-  background-color: $darknest-blue;
 
   @media (max-width: 1222px) {
     padding: 58px 11% 50px 7.5402%;
+  }
+
+  @media (min-width: $fixed-width) {
+    width: 683px;
+    margin-left: auto;
+    padding: 58px 170px 50px 103px;
   }
 }
 
@@ -112,7 +119,13 @@
   flex-flow: column;
   width: 50%;
   padding: 58px 7.5402% 47px 9.0775%;
-  border-top: 1px solid #74819C ;
+  background-color: $white;
+
+  @media (min-width: $fixed-width) {
+    width: 683px;
+    margin-right: auto;
+    padding: 58px 103px 47px 124px;
+  }
 }
 
 .feedback__contacts h3 {
@@ -195,7 +208,8 @@
 @media (max-width: $desktop-width) {
   .feedback {
     flex-flow: column;
-    padding-top: 50px;
+    margin-top: 50px;
+    background-image: linear-gradient(180deg, $darknest-blue 0%, $darknest-blue 50%, $white 50%, $white 100%);
   }
 
   .feedback__lesson {
@@ -273,7 +287,7 @@
 
 @media (max-width: $tablet-width) {
   .feedback {
-    padding-top: 40px;
+    margin-top: 40px;
   }
 
   .feedback__lesson {

@@ -30,6 +30,8 @@ a {
 
 .visually-hidden {
   position: absolute;
+  top: 0;
+  left: 0;
   clip: rect(1px 1px 1px 1px);
   padding: 0;
   border: 0;

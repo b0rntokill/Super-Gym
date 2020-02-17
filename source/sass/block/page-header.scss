@@ -1,6 +1,4 @@
 .page-header {
-  display: flex;
-  flex-flow: row wrap;
   padding-top: 30px;
   padding-bottom: 51px;
   // background-image: radial-gradient(33.97% 69.22% at 16.03% 39.06%, #003d85 99.48%, #b80027 99.03%);
@@ -9,10 +7,10 @@
   background-image: radial-gradient(80% 90% at bottom left,#003D85 0%,#B80027 100%);
 }
 
-// .page-header__wrapper {
-//   display: flex;
-//   flex-flow: row wrap;
-// }
+.page-header__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
 
 .page-header__top {
   display: flex;
@@ -41,7 +39,6 @@
 
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  cursor: pointer;
 }
 
 .page-header__title {
@@ -108,6 +105,16 @@
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__title a span {
@@ -155,7 +162,16 @@
   @include font-setting(12px, 14px, normal, $white);
 
   text-transform: uppercase;
-  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: $desktop-width) {

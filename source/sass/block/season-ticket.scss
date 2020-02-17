@@ -7,14 +7,6 @@
   flex-flow: column;
   padding-top: 116px;
   padding-bottom: 90px;
-
-  @media (min-width: 1450px) {
-    padding: 116px 7.5402% 90px 7.5402%;
-  }
-
-  @media (min-width: 1610px) {
-    padding: 116px 18.5% 90px 18.5%;
-  }
 }
 
 .season-ticket h2 {
@@ -163,12 +155,17 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
-  // Мне кажется без js не обойтись!
+
   &:hover,
   &:focus {
     color: $white;
     box-shadow: none;
     background-image: linear-gradient(111.72deg, #ED0233 17.6%, #003EB7 95.31%);
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -196,6 +193,15 @@
 
   &:not(:nth-of-type(3n)) {
     margin-right: 3%;
+  }
+
+  &:hover {
+    color: rgba(16, 38, 84, 0.7);
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(16, 38, 84, 0.4);
   }
 }
 

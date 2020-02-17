@@ -3,14 +3,6 @@
   flex-flow: row;
   padding-top: 120px;
   padding-bottom: 50px;
-
-  @media (min-width: 1450px) {
-    padding: 116px 7.5402% 90px 7.5402%;
-  }
-
-  @media (min-width: 1610px) {
-    padding: 116px 18.5% 90px 18.5%;
-  }
 }
 
 .promo__title {
@@ -44,6 +36,16 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .promo__description {

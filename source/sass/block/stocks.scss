@@ -1,11 +1,6 @@
 .stocks {
   padding-top: 66px;
   padding-bottom: 20px;
-
-  @media (min-width: 1450px) {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
 }
 
 .stocks h2 {
@@ -25,11 +20,6 @@
   flex-flow: row wrap;
   width: 100%;
   padding: 54px 0;
-
-  @media (min-width: 1450px) {
-    width: 1305px;
-    margin: 0 auto;
-  }
 }
 
 .stocks__year-promo {
@@ -81,6 +71,16 @@
   border-bottom: 1px solid $white;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .stocks__year-promo img {
@@ -147,7 +147,17 @@
 
   border-bottom: 1px solid $blue;
   letter-spacing: 0.05em;
-  text-transform: uppercase
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: $desktop-width) {

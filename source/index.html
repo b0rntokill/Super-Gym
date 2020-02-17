@@ -13,8 +13,8 @@
   <div style="display: none;">
     <include src="build/img/sprite_auto.svg"></include>
   </div>
-  <header class="page-header container">
-    <!-- <div class="page-header_wrapper"> -->
+  <header class="page-header">
+    <div class="page-header__wrapper container">
       <ul class="page-header__top">
         <li class="page-header__top-item"><a>Supergym</a></li>
         <li class="page-header__top-item page-header__top-item--phone"><a href="tel:+88005555555">8-800-555-55-55</a></li>
@@ -27,7 +27,7 @@
           <li><p>Групповые занятия</p></li>
           <li><p>Кардио-зона</p></li>
         </ul>
-        <a href="#">
+        <a class="js-scroll" href="#season-ticket">
           <span>Купить абонемент</span>
         </a>
       </div>
@@ -37,7 +37,7 @@
         <li><a href="#">VK</a></li>
         <li><a href="#">IG</a></li>
       </ul>
-    <!-- </div> -->
+    </div>
   </header>
   <main>
     <section class="gym container">
@@ -70,7 +70,7 @@
         </div>
       </div>
     </section>
-    <section class="season-ticket">
+    <section class="season-ticket" id="season-ticket">
       <div class="season-ticket__wrapper container">
         <h2>Абонементы</h2>
           <div class="season-ticket__slider">
@@ -79,7 +79,7 @@
             <input class="visually-hidden" type="radio" name="point" id="slide3">
             <div class="season-ticket__slide slide1">
               <div class="season-ticket__slide-inner">
-                <article class="season-ticket__ticket" tabindex="0">
+                <article class="season-ticket__ticket">
                   <h3>С тренером</h3>
                   <b>12 занятий</b>
                   <p data-parent="5000">
@@ -92,7 +92,7 @@
                 </article>
               </div>
               <div class="season-ticket__slide-inner">
-                <article class="season-ticket__ticket" tabindex="0">
+                <article class="season-ticket__ticket">
                   <h3>Дневной</h3>
                   <b>с 8:00 до 17:00</b>
                   <p data-parent="1700">
@@ -105,7 +105,7 @@
                 </article>
               </div>
               <div class="season-ticket__slide-inner">
-                <article class="season-ticket__ticket" tabindex="0">
+                <article class="season-ticket__ticket">
                   <h3>Полный день</h3>
                   <b>с 8:00 до 22:00</b>
                   <p data-parent="2700">
@@ -120,7 +120,7 @@
             </div>
             <div class="season-ticket__slide slide2">
               <div class="season-ticket__slide-inner">
-                <article class="season-ticket__ticket" tabindex="0">
+                <article class="season-ticket__ticket">
                   <h3>С тренером</h3>
                   <b>12 занятий</b>
                   <p data-parent="27000">
@@ -133,7 +133,7 @@
                 </article>
               </div>
               <div class="season-ticket__slide-inner">
-                <article class="season-ticket__ticket" tabindex="0">
+                <article class="season-ticket__ticket">
                   <h3>Дневной</h3>
                   <b>с 8:00 до 17:00</b>
                   <p data-parent="7500">
@@ -146,7 +146,7 @@
                 </article>
               </div>
               <div class="season-ticket__slide-inner">
-                <article class="season-ticket__ticket" tabindex="0">
+                <article class="season-ticket__ticket">
                   <h3>Полный день</h3>
                   <b>с 8:00 до 22:00</b>
                   <p data-parent="13500">
@@ -161,7 +161,7 @@
             </div>
             <div class="season-ticket__slide slide3">
               <div class="season-ticket__slide-inner">
-                <article class="season-ticket__ticket" tabindex="0">
+                <article class="season-ticket__ticket">
                   <h3>С тренером</h3>
                   <b>12 занятий</b>
                   <p data-parent="50000">
@@ -174,7 +174,7 @@
                 </article>
               </div>
               <div class="season-ticket__slide-inner">
-                <article class="season-ticket__ticket" tabindex="0">
+                <article class="season-ticket__ticket">
                   <h3>Дневной</h3>
                   <b>с 8:00 до 17:00</b>
                   <p data-parent="17000">
@@ -187,7 +187,7 @@
                 </article>
               </div>
               <div class="season-ticket__slide-inner">
-                <article class="season-ticket__ticket" tabindex="0">
+                <article class="season-ticket__ticket">
                   <h3>Полный день</h3>
                   <b>с 8:00 до 22:00</b>
                   <p data-parent="27000">
@@ -239,7 +239,7 @@
       </div>
       <img src="img/promo.jpg" alt="Изображение соревнований по CrossFit Super Games" width="660" height="500">
     </section>
-    <section class="trainers container">
+    <section class="trainers container" id="trainers">
       <h2>Тренеры</h2>
       <div class="trainers__slider">
         <ul class="trainers__slider-wrapper swiper-wrapper">
@@ -454,7 +454,7 @@
         </div>
       </div>
     </section>
-    <section class="stocks container">
+    <section class="stocks container" id="stocks">
       <h2>Акции</h2>
       <div class="stocks__inner">
         <div class="stocks__year-promo">
@@ -551,13 +551,13 @@
           <a href="#">Услуги</a>
         </li>
         <li class="page-footer__nav-item page-footer__nav-item--season-ticket">
-          <a href="#">Абонементы</a>
+          <a class="js-scroll" href="#season-ticket">Абонементы</a>
         </li>
         <li class="page-footer__nav-item page-footer__nav-item--stocks">
-          <a href="#">Акции</a>
+          <a class="js-scroll" href="#stocks">Акции</a>
         </li>
         <li class="page-footer__nav-item page-footer__nav-item--trainers">
-          <a href="#">Тренеры</a>
+          <a class="js-scroll" href="#trainers">Тренеры</a>
         </li>
         <li class="page-footer__nav-item">
           <a href="#">Расписание</a>
@@ -592,6 +592,7 @@
     </div>
   </footer>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="https://unpkg.com/imask"></script>
   <script src="js/vender.js"></script>
   <script src="js/script.js"></script>
 </body>

@@ -69,12 +69,7 @@ const trainersSwiper = new Swiper(`.trainers__slider`, {
       slidesPerView: 4,
       slidesPerGroup: 4,
       spaceBetween: 40,
-    },
-    1450: {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      spaceBetween: 10,
-    },
+    }
   },
 });
 

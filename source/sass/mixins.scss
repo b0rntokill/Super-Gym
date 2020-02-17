@@ -1,13 +1,21 @@
 @mixin breakpoint {
-  // width: $fixed-width;
+  width: $fixed-width;
   margin: 0 auto;
-  padding: 0 7.5402%;
+  padding-left: 103px;
+  padding-right: 103px;
+
+  @media (max-width: $fixed-width) {
+    width: 100%;
+    padding: 0 7.5402%;
+  }
 
   @media (max-width: $desktop-width) {
+    width: 100%;
     padding: 0 5.859%;
   }
 
   @media (max-width: $tablet-width) {
+    width: 100%;
     padding: 0 4.0625%;
   }
 }

@@ -66,14 +66,30 @@
     width: 100%;
     height: 100%;
     background-color: rgba(20, 54, 122, 0.5);
+    opacity: 1;
+  }
+
+  &--overlay:hover::before,
+  &--overlay:focus::before {
+    opacity: 0;
   }
 }
 
 .gym__video-wrapper svg {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  z-index: 1;
+
+  &:hover,
+  &:focus {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .gym__video-wrapper video {
