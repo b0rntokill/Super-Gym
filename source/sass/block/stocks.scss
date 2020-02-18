@@ -40,29 +40,41 @@
 }
 
 .stocks__year-promo span {
+  width: 100%;
   font-family: $default-font;
 
   @include font-setting(28px, 44px, bold, $white);
+
+  word-wrap: break-word;
 }
 
 .stocks__year-promo b {
+  width: 100%;
   margin-top: -26px;
   font-family: $default-font;
 
   @include font-setting(70px, 109px, bold, $white);
+
+  word-wrap: break-word;
 }
 
 .stocks__year-promo p {
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: $default-font;
 
   @include font-setting(18px, 25px, normal, $white);
+
+  word-wrap: break-word;
 }
 
 .stocks__year-promo a {
+  width: min-content;
+  max-width: 100%;
   margin: 0;
   margin-top: auto;
+  margin-right: auto;
   padding: 0;
   font-family: $default-font;
 
@@ -71,6 +83,8 @@
   border-bottom: 1px solid $white;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  text-align: left;
+  word-wrap: break-word;
 
   &:hover,
   &:focus {
@@ -81,11 +95,20 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    max-width: 80px;
+  }
+}
+
+.stocks__year-promo picture {
+  display: flex;
+  width: 50%;
 }
 
 .stocks__year-promo img {
   object-fit: cover;
-  width: 50%;
+  width: 100%;
 }
 
 .stocks__inner ul {
@@ -125,21 +148,29 @@
 }
 
 .stocks__inner ul li b {
+  width: 100%;
   margin-bottom: 5px;
   font-family: $default-font;
 
   @include font-setting(26px, 36px, bold, $blue);
+
+  word-wrap: break-word;
 }
 
 .stocks__inner ul li p {
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: $default-font;
 
   @include font-setting(16px, 22px, normal, $blue);
+
+  word-wrap: break-word;
 }
 
 .stocks__inner ul li a {
+  width: min-content;
+  max-width: 100%;
   margin-top: auto;
   font-family: $default-font;
 
@@ -148,6 +179,7 @@
   border-bottom: 1px solid $blue;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  word-wrap: break-word;
 
   &:hover,
   &:focus {
@@ -157,6 +189,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    max-width: 68px;
   }
 }
 
@@ -189,8 +225,12 @@
     background-color: $red;
   }
 
-  .stocks__year-promo img {
+  .stocks__year-promo picture {
     width: 58.8495%;
+  }
+
+  .stocks__year-promo img {
+    width: 100%;
   }
 
   .stocks__inner ul {
@@ -244,6 +284,10 @@
   .stocks__year-promo p {
     margin-top: -4px;
     text-align: center;
+  }
+
+  .stocks__year-promo picture {
+    width: 100%;
   }
 
   .stocks__year-promo img {

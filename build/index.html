@@ -39,18 +39,21 @@
           <li><p>Групповые занятия</p></li>
           <li><p>Кардио-зона</p></li>
         </ul>
-        <a class="js-scroll" href="#season-ticket">
+        <a href="#season-ticket">
           <span>Купить абонемент</span>
         </a>
       </div>
-      <img src="img/sportsman.jpg" alt="Изображение члена нашего клуба" width="500" height="556">
+      <picture>
+        <source type="image/webp" data-srcset="img/sportsman@1x.webp 1x, img/sportsman@2x.webp 2x">
+
+        <img class="lazyload" data-src="img/sportsman@1x.jpg" data-srcset="img/sportsman@1x.jpg 1x, img/sportsman@2x.jpg 2x" width="500" height="556" alt="Изображение члена нашего клуба">
+      </picture>
       <ul class="page-header__social">
         <li><a href="#">FB</a></li>
         <li><a href="#">VK</a></li>
         <li><a href="#">IG</a></li>
       </ul>
-    </div>
-  </header>
+  </div></header>
   <main>
     <section class="gym container">
     <h1 class="visually-hidden">Landing page Super Gym</h1>
@@ -61,16 +64,20 @@
         <p class="gym__description gym__description--more">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре&nbsp;есть несколько оборудованных залов для различных видов групповых занятий.</p>
       </div>
       <div class="gym__photo">
-        <img src="img/gym.jpg" alt="Фото нашего зала">
+        <picture>
+          <source type="image/webp" data-srcset="img/gym@1x.webp 1x, img/gym@2x.webp 2x">
+
+          <img class="lazyload" data-src="img/gym@1x.jpg" data-srcset="img/gym@1x.jpg 1x, img/gym@2x.jpg 2x" width="660" height="401" alt="Фото нашего зала">
+        </picture>
         <div class="gym__video-wrapper gym__video-wrapper--overlay">
           <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="Gradient01" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#ED0233"></stop>
+                <stop offset="0" stop-color="#ED0233"></stop>
                 <stop offset="1" stop-color="#003EB7"></stop>
               </linearGradient>
               <linearGradient id="Gradient02" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#003D85"></stop>
+                <stop offset="0" stop-color="#003D85"></stop>
                 <stop offset="0.885417" stop-color="#B80027"></stop>
               </linearGradient>
             </defs>
@@ -78,7 +85,11 @@
             <circle cx="50" cy="50" r="36" fill="url(#Gradient02)"></circle>
             <path d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z" fill="white"></path>
           </svg>
-          <video poster="img/gym-video-desktop.jpg"></video>
+          <picture>
+            <source type="image/webp" data-srcset="img/gym-video-desktop@1x.webp 1x, img/gym-video-desktop@2x.webp 2x">
+
+            <img class="lazyload" data-src="img/gym-video-desktop@1x.jpg" data-srcset="img/gym-video-desktop@1x.jpg 1x, img/gym-video-desktop@2x.jpg 2x" width="364" height="228" alt="Видео нашего зала">
+          </picture>
         </div>
       </div>
     </section>
@@ -221,8 +232,6 @@
               <div class="season-ticket__scrollbar-inner"></div>
             </div>
           </div>
-        <!-- Мейби стоит сделать вообще псевдо элементом от род контейнера -->
-        <!-- <img src="img/plates.png" alt="Изображение блинов для штанги" width="321" height="384"> -->
       </div>
     </section>
     <section class="promo container">
@@ -234,10 +243,10 @@
               <p>Дата</p>
                 <div>
                   <b>7</b>
-                  <time>
+                  <p>
                     <span>Марта</span>
                     <span>2019</span>
-                  </time>
+                  </p>
                 </div>
             </div>
             <div class="promo__date-inner">
@@ -249,14 +258,22 @@
         <p>Ежегодные соревнования по CrossFit</p>
         <a href="#">заполнить заявку</a>
       </div>
-      <img src="img/promo.jpg" alt="Изображение соревнований по CrossFit Super Games" width="660" height="500">
+      <picture>
+        <source type="image/webp" data-srcset="img/promo@1x.webp 1x, img/promo@2x.webp 2x">
+
+        <img class="lazyload" data-src="img/promo@1x.jpg" data-srcset="img/promo@1x.jpg 1x, img/promo@2x.jpg 2x" width="660" height="500" alt="Изображение соревнований по CrossFit Super Games">
+      </picture>
     </section>
     <section class="trainers container" id="trainers">
       <h2>Тренеры</h2>
       <div class="trainers__slider">
         <ul class="trainers__slider-wrapper swiper-wrapper">
           <li class="trainers__slide swiper-slide">
-            <img src="img/trainer-anna.jpg" alt="Изображение тренера Анны Павловой" width="260" height="294">
+            <picture>
+              <source type="image/webp" data-srcset="img/trainer-anna@1x.webp 1x, img/trainer-anna@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/trainer-anna@1x.jpg" data-srcset="img/trainer-anna@1x.jpg 1x, img/trainer-anna@2x.jpg 2x" width="260" height="294" alt="Изображение тренера Анны Павловой">
+            </picture>
             <p class="trainers__name">Анна Павлова</p>
             <div class="trainers__slide-inner">
               <p>Анна Павлова</p>
@@ -275,7 +292,11 @@
             </div>
           </li>
           <li class="trainers__slide swiper-slide">
-            <img src="img/trainer-aleksey.jpg" alt="Изображение тренера Алексея Лаврова" width="260" height="294">
+            <picture>
+              <source type="image/webp" data-srcset="img/trainer-aleksey@1x.webp 1x, img/trainer-aleksey@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/trainer-aleksey@1x.jpg" data-srcset="img/trainer-aleksey@1x.jpg 1x, img/trainer-aleksey@2x.jpg 2x" width="260" height="294" alt="Изображение тренера Алексея Лаврова">
+            </picture>
             <p class="trainers__name">Алексей Лавров</p>
             <div class="trainers__slide-inner">
               <p>Алексей Лавров</p>
@@ -294,7 +315,11 @@
             </div>
           </li>
           <li class="trainers__slide swiper-slide">
-            <img src="img/trainer-aleksandr.jpg" alt="Изображение тренера Александра Пашкова" width="260" height="294">
+            <picture>
+              <source type="image/webp" data-srcset="img/trainer-aleksandr@1x.webp 1x, img/trainer-aleksandr@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/trainer-aleksandr@1x.jpg" data-srcset="img/trainer-aleksandr@1x.jpg 1x, img/trainer-aleksandr@2x.jpg 2x" width="260" height="294" alt="Изображение тренера Александра Пашкова">
+            </picture>
             <p class="trainers__name">Александр Пашков</p>
             <div class="trainers__slide-inner">
               <p>Александр Пашков</p>
@@ -313,7 +338,11 @@
             </div>
           </li>
           <li class="trainers__slide swiper-slide">
-            <img src="img/trainer-maria.jpg" alt="Изображение тренера Марии Кетовой" width="260" height="294">
+            <picture>
+              <source type="image/webp" data-srcset="img/trainer-maria@1x.webp 1x, img/trainer-maria@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/trainer-maria@1x.jpg" data-srcset="img/trainer-maria@1x.jpg 1x, img/trainer-maria@2x.jpg 2x" width="260" height="294" alt="Изображение тренера Марии Кетовой">
+            </picture>
             <p class="trainers__name">Мария Кетова</p>
             <div class="trainers__slide-inner">
               <p>Мария Кетова</p>
@@ -332,67 +361,83 @@
             </div>
           </li>
           <li class="trainers__slide swiper-slide">
-            <img src="img/trainer-aleksandr.jpg" alt="Изображение тренера Александра Пашкова" width="260" height="294">
-            <p class="trainers__name">Александр Пашков</p>
-            <div class="trainers__slide-inner">
-              <p>Александр Пашков</p>
-              <b>CrossFit</b>
-              <ul>
-                <li>
-                  <p>Certified Level 3 Trainer</p>
-                </li>
-                <li>
-                  <p>Победитель чемпионата России по CrossFit</p>
-                </li>
-                <li>
-                  <p>Опыт — 6 лет</p>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="trainers__slide swiper-slide">
-            <img src="img/trainer-maria.jpg" alt="Изображение тренера Марии Кетовой" width="260" height="294">
-            <p class="trainers__name">Мария Кетова</p>
-            <div class="trainers__slide-inner">
-              <p>Мария Кетова</p>
-              <b>CrossFit</b>
-              <ul>
-                <li>
-                  <p>Certified Level 3 Trainer</p>
-                </li>
-                <li>
-                  <p>Победитель чемпионата России по CrossFit</p>
-                </li>
-                <li>
-                  <p>Опыт — 6 лет</p>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="trainers__slide swiper-slide">
-            <img src="img/trainer-aleksey.jpg" alt="Изображение тренера Алексея Лаврова" width="260" height="294">
-            <p class="trainers__name">Алексей Лавров</p>
-            <div class="trainers__slide-inner">
-              <p>Алексей Лавров</p>
-              <b>CrossFit</b>
-              <ul>
-                <li>
-                  <p>Certified Level 3 Trainer</p>
-                </li>
-                <li>
-                  <p>Победитель чемпионата России по CrossFit</p>
-                </li>
-                <li>
-                  <p>Опыт — 6 лет</p>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="trainers__slide swiper-slide">
-            <img src="img/trainer-anna.jpg" alt="Изображение тренера Анны Павловой" width="260" height="294">
+            <picture>
+              <source type="image/webp" data-srcset="img/trainer-anna@1x.webp 1x, img/trainer-anna@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/trainer-anna@1x.jpg" data-srcset="img/trainer-anna@1x.jpg 1x, img/trainer-anna@2x.jpg 2x" width="260" height="294" alt="Изображение тренера Анны Павловой">
+            </picture>
             <p class="trainers__name">Анна Павлова</p>
             <div class="trainers__slide-inner">
               <p>Анна Павлова</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="trainers__slide swiper-slide">
+            <picture>
+              <source type="image/webp" data-srcset="img/trainer-aleksey@1x.webp 1x, img/trainer-aleksey@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/trainer-aleksey@1x.jpg" data-srcset="img/trainer-aleksey@1x.jpg 1x, img/trainer-aleksey@2x.jpg 2x" width="260" height="294" alt="Изображение тренера Алексея Лаврова">
+            </picture>
+            <p class="trainers__name">Алексей Лавров</p>
+            <div class="trainers__slide-inner">
+              <p>Алексей Лавров</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="trainers__slide swiper-slide">
+            <picture>
+              <source type="image/webp" data-srcset="img/trainer-aleksandr@1x.webp 1x, img/trainer-aleksandr@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/trainer-aleksandr@1x.jpg" data-srcset="img/trainer-aleksandr@1x.jpg 1x, img/trainer-aleksandr@2x.jpg 2x" width="260" height="294" alt="Изображение тренера Александра Пашкова">
+            </picture>
+            <p class="trainers__name">Александр Пашков</p>
+            <div class="trainers__slide-inner">
+              <p>Александр Пашков</p>
+              <b>CrossFit</b>
+              <ul>
+                <li>
+                  <p>Certified Level 3 Trainer</p>
+                </li>
+                <li>
+                  <p>Победитель чемпионата России по CrossFit</p>
+                </li>
+                <li>
+                  <p>Опыт — 6 лет</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="trainers__slide swiper-slide">
+            <picture>
+              <source type="image/webp" data-srcset="img/trainer-maria@1x.webp 1x, img/trainer-maria@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/trainer-maria@1x.jpg" data-srcset="img/trainer-maria@1x.jpg 1x, img/trainer-maria@2x.jpg 2x" width="260" height="294" alt="Изображение тренера Марии Кетовой">
+            </picture>
+            <p class="trainers__name">Мария Кетова</p>
+            <div class="trainers__slide-inner">
+              <p>Мария Кетова</p>
               <b>CrossFit</b>
               <ul>
                 <li>
@@ -476,7 +521,11 @@
             <p>Безлимитный абонемент в тренажерный зал</p>
             <a href="#">подробнее</a>
           </div>
-          <img src="img/stock-girl.jpg" alt="Изображение девушки в леггинсах с эффектом push-up" width="280" height="462">
+          <picture>
+            <source type="image/webp" data-srcset="img/stock-girl@1x.webp 1x, img/stock-girl@2x.webp 2x">
+
+            <img class="lazyload" data-src="img/stock-girl@1x.jpg" data-srcset="img/stock-girl@1x.jpg 1x, img/stock-girl@2x.jpg 2x" width="280" height="462" alt="Изображение девушки в леггинсах с эффектом push-up">
+          </picture>
         </div>
         <ul>
           <li>
@@ -497,21 +546,33 @@
       <div class="reviews__slider">
         <ul class="reviews__slider-wrapper swiper-wrapper">
           <li class="reviews__slider-slide swiper-slide">
-            <img src="img/girl-avatar.png" alt="Аватар пользователя" width="80" height="80">
+            <picture>
+              <source type="image/webp" data-srcset="img/girl-avatar@1x.webp 1x, img/girl-avatar@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/girl-avatar@1x.png" data-srcset="img/girl-avatar@1x.png 1x, img/girl-avatar@2x.png 2x" width="80" height="80" alt="Аватар пользователя">
+            </picture>
             <div>
               <b>Анна Орлова</b>
               <p>«Хожу в SuperClub уже больше года. Нравится, что&nbsp;в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал&nbsp;просторный, даже в вечернее время нет очередей»</p>
             </div>
           </li>
           <li class="reviews__slider-slide swiper-slide">
-            <img src="img/girl-avatar.png" alt="Аватар пользователя" width="80" height="80">
+            <picture>
+              <source type="image/webp" data-srcset="img/girl-avatar@1x.webp 1x, img/girl-avatar@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/girl-avatar@1x.png" data-srcset="img/girl-avatar@1x.png 1x, img/girl-avatar@2x.png 2x" width="80" height="80" alt="Аватар пользователя">
+            </picture>
             <div>
               <b>Руки Базуки</b>
               <p>«Хожу в SuperClub уже больше недели. Зал просторный, даже в вечернее время. Кому мою коронную двоечку?»</p>
             </div>
           </li>
           <li class="reviews__slider-slide swiper-slide">
-            <img src="img/girl-avatar.png" alt="Аватар пользователя" width="80" height="80">
+            <picture>
+              <source type="image/webp" data-srcset="img/girl-avatar@1x.webp 1x, img/girl-avatar@2x.webp 2x">
+
+              <img class="lazyload" data-src="img/girl-avatar@1x.png" data-srcset="img/girl-avatar@1x.png 1x, img/girl-avatar@2x.png 2x" width="80" height="80" alt="Аватар пользователя">
+            </picture>
             <div>
               <b>Борат Сагдиев</b>
               <p>«Нраица, ходи сюда, делай то! Какой важный курица!»</p>
@@ -527,7 +588,9 @@
     <div class="feedback__lesson">
       <h3>Бесплатное занятие</h3>
       <form class="feedback__lesson-form" action="#" method="get">
+        <label class="visually-hidden" for="user-name"></label>
         <input id="user-name" name="user-name" type="text" placeholder="Имя" pattern="([A-Za-z ]{3,30}$)|([А-Яа-я ]{3,30}$)" required="">
+        <label class="visually-hidden" for="user-tel"></label>
         <input id="user-tel" name="user-tel" type="tel" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
         <button type="submit">отправить</button>
       </form>
@@ -563,13 +626,13 @@
           <a href="#">Услуги</a>
         </li>
         <li class="page-footer__nav-item page-footer__nav-item--season-ticket">
-          <a class="js-scroll" href="#season-ticket">Абонементы</a>
+          <a href="#season-ticket">Абонементы</a>
         </li>
         <li class="page-footer__nav-item page-footer__nav-item--stocks">
-          <a class="js-scroll" href="#stocks">Акции</a>
+          <a href="#stocks">Акции</a>
         </li>
         <li class="page-footer__nav-item page-footer__nav-item--trainers">
-          <a class="js-scroll" href="#trainers">Тренеры</a>
+          <a href="#trainers">Тренеры</a>
         </li>
         <li class="page-footer__nav-item">
           <a href="#">Расписание</a>
@@ -605,6 +668,7 @@
   </footer>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="https://unpkg.com/imask"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
   <script src="js/vender.js"></script>
   <script src="js/script.js"></script>
 </body>

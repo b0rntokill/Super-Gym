@@ -33,6 +33,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .feedback__lesson-form {
@@ -102,6 +103,8 @@
   align-items: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  word-wrap: break-word;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -138,6 +141,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .feedback__contacts ul {

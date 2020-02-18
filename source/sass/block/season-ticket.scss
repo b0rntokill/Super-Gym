@@ -1,5 +1,34 @@
 .season-ticket {
+  position: relative;
   background-color: $background-gray;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -190px;
+    right: -184px;
+    width: 471px;
+    height: 534px;
+    background-image: url("../img/plates@1x.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/plates@2x.png");
+    }
+  }
+}
+// Для браузеров поддерживающих webp
+.season-ticket {
+  &::after {
+    background-image: url("../img/plates@1x.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/plates@2x.webp");
+    }
+  }
 }
 
 .season-ticket__wrapper {
@@ -27,6 +56,7 @@
   flex-flow: row wrap;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .season-ticket__slider input {
@@ -225,6 +255,16 @@
 }
 
 @media (max-width: $desktop-width) {
+  .season-ticket {
+
+    &::after {
+      bottom: -166px;
+      right: -75px;
+      width: 421px;
+      height: 484px;
+    }
+  }
+
   .season-ticket__wrapper {
     display: flex;
     flex-flow: column;
@@ -303,6 +343,13 @@
 }
 
 @media (max-width: $tablet-width) {
+  .season-ticket {
+
+    &::after {
+      display: none;
+    }
+  }
+
   .season-ticket__wrapper {
     padding-top: 68px;
     padding-bottom: 35px;

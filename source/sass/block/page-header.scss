@@ -25,20 +25,23 @@
 .page-header__top-item {
   display: flex;
   flex-flow: row;
-  width: 50%;
+  width: 20%;
 
   &--phone {
-    justify-content: flex-end;
+    margin-left: auto;
+    text-align: right;
   }
 }
 
 .page-header__top-item a {
+  width: 100%;
   font-family: "Bebas Neue", "Arial", sans-serif;
 
   @include font-setting(26px, 26px, normal, $white);
 
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  word-wrap: break-word;
 }
 
 .page-header__title {
@@ -63,7 +66,7 @@
 }
 
 .page-header__title b {
-  width: 300px;
+  width: 310px;
   font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
 
   @include font-setting(109px, 109px, bold, $white);
@@ -134,13 +137,22 @@
   @include font-setting(14px, 21px, normal, $white);
 }
 
+.page-header picture {
+  display: flex;
+}
+
 .page-header img {
   margin-top: -5px;
+
+  @media (max-width: 1365px) {
+    margin-top: 0;
+  }
 }
 
 .page-header__social {
   display: flex;
   flex-direction: column;
+  align-self: flex-end;
   width: auto;
   min-height: 122px;
   margin: auto 0 0 auto;
@@ -182,6 +194,10 @@
 
   .page-header__top {
     margin-bottom: 19px;
+  }
+
+  .page-header__top-item {
+    width: 25%;
   }
 
   .page-header__top-item a {
@@ -242,6 +258,10 @@
   .page-header__top {
     margin-bottom: 19px;
     padding: 0 2px;
+  }
+
+  .page-header__top-item {
+    width: 50%;
   }
 
   .page-header__top-item a {

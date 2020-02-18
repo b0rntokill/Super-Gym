@@ -54,6 +54,10 @@
   }
 }
 
+.trainers__slide picture {
+  display: flex;
+}
+
 .trainers__slide img {
   width: 100%;
 }
@@ -80,6 +84,10 @@
   padding: 52px 42px 20px 52px;
   background-color: rgba(16, 38, 84, 0.89);
   box-sizing: border-box;
+
+  @media (max-width: 1365px) {
+    padding: 52px 22px 20px 32px;
+  }
 }
 
 .trainers__slide-inner p {
@@ -203,6 +211,14 @@
 
   .trainers__name {
     padding: 0 0 0 7px;
+  }
+
+  .trainers__slide-inner {
+    padding: 52px 42px 20px 52px;
+
+    @media (min-width: 950px) {
+      padding: 52px 12px 20px 22px;
+    }
   }
 
   .trainers__slide-inner p {
