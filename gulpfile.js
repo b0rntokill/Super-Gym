@@ -107,7 +107,7 @@ gulp.task(`js`, function () {
 });
 
 gulp.task(`vendors`, function () {
-  return gulp.src(`source/vendors/*.js`)
+  return gulp.src(`source/js/vendors/*.js`)
       .pipe(sourcemap.init())
       .pipe(babel())
       .pipe(concat(`vendor.js`))
