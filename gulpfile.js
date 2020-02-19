@@ -14,6 +14,7 @@ const posthtml = require(`gulp-posthtml`);
 const include = require(`posthtml-include`);
 const del = require(`del`);
 const babel = require(`gulp-babel`);
+const concat = require(`gulp-concat`);
 
 // const polyfill = `./node_modules/@babel/polyfill/browser.js`;
 
@@ -85,7 +86,6 @@ gulp.task(`copy`, function () {
   return gulp.src([
     `source/fonts/**/*.{woff,woff2}`,
     `source/img/**`,
-    `source/js/vender.js`,
     `source//*.ico`
   ], {
     base: `source`
@@ -106,5 +106,14 @@ gulp.task(`js`, function () {
       .pipe(gulp.dest(`build/js`));
 });
 
-gulp.task(`build`, gulp.series(`clean`, `copy`, `css`, `sprite`, `html`, `js`));
+gulp.task(`vendors`, function () {
+  return gulp.src(`source/vendors/*.js`)
+      .pipe(sourcemap.init())
+      .pipe(babel())
+      .pipe(concat(`vendor.js`))
+      .pipe(sourcemap.write(`.`))
+      .pipe(gulp.dest(`build/js`));
+});
+
+gulp.task(`build`, gulp.series(`clean`, `copy`, `css`, `sprite`, `html`, `js`, `vendors`));
 gulp.task(`start`, gulp.series(`build`, `server`));

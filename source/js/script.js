@@ -28,20 +28,16 @@ setPhoneMask(`+{7}(000)000-00-00`, `input[type="tel"]`);
 
 const trainersSwiper = new Swiper(`.trainers__slider`, {
   loop: true,
-  navigation: {
-    nextEl: `.trainers__slider-button-next`,
-    prevEl: `.trainers__slider-button-prev`,
-  },
+  slidesPerView: 4,
+  slidesPerGroup: 4,
+  spaceBetween: 40,
+  nextButton: `.trainers__slider-button-next`,
+  prevButton: `.trainers__slider-button-prev`,
   breakpoints: {
-    320: {
+    600: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: 0,
-    },
-    600: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 30,
+      spaceBetween: 1,
     },
     768: {
       slidesPerView: 2,
@@ -105,8 +101,6 @@ const reviewsSwiper = new Swiper(`.reviews__slider`, {
   loop: true,
   slidesPerView: 1,
   slidesPerGroup: 1,
-  navigation: {
-    nextEl: `.reviews__slider-button-next`,
-    prevEl: `.reviews__slider-button-prev`,
-  },
+  nextButton: `.reviews__slider-button-next`,
+  prevButton: `.reviews__slider-button-prev`
 });
