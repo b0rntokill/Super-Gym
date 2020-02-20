@@ -15,6 +15,7 @@ const include = require(`posthtml-include`);
 const del = require(`del`);
 const babel = require(`gulp-babel`);
 const concat = require(`gulp-concat`);
+const uglify = require(`gulp-uglify`);
 
 // const polyfill = `./node_modules/@babel/polyfill/browser.js`;
 
@@ -86,6 +87,7 @@ gulp.task(`copy`, function () {
   return gulp.src([
     `source/fonts/**/*.{woff,woff2}`,
     `source/img/**`,
+    `source/js/main.js`,
     `source//*.ico`
   ], {
     base: `source`
@@ -98,10 +100,11 @@ gulp.task(`clean`, function () {
 });
 
 gulp.task(`js`, function () {
-  return gulp.src(`source/js/script.js`)
+  return gulp.src(`source/js/main.js`)
       .pipe(sourcemap.init())
       .pipe(babel())
-      .pipe(rename(`main.js`))
+      .pipe(uglify())
+      .pipe(rename(`main.min.js`))
       .pipe(sourcemap.write(`.`))
       .pipe(gulp.dest(`build/js`));
 });
@@ -110,7 +113,8 @@ gulp.task(`vendors`, function () {
   return gulp.src(`source/js/vendors/*.js`)
       .pipe(sourcemap.init())
       .pipe(babel())
-      .pipe(concat(`vendor.js`))
+      .pipe(uglify())
+      .pipe(concat(`vendor.min.js`))
       .pipe(sourcemap.write(`.`))
       .pipe(gulp.dest(`build/js`));
 });
