@@ -1,7 +1,7 @@
 .feedback {
   display: flex;
   flex-flow: row;
-  margin-top: 60px;
+  margin-top: 50px;
   border-top: 1px solid #74819C;
   background-image: linear-gradient(90deg, $darknest-blue 0%, $darknest-blue 50%, $white 50%, $white 100%);
 }
@@ -212,8 +212,9 @@
 @media (max-width: $desktop-width) {
   .feedback {
     flex-flow: column;
-    margin-top: 50px;
+    margin-top: 40px;
     background-image: linear-gradient(180deg, $darknest-blue 0%, $darknest-blue 50%, $white 50%, $white 100%);
+    border: none;
   }
 
   .feedback__lesson {
@@ -223,7 +224,7 @@
   }
 
   .feedback__lesson h3 {
-    margin: 0 0 20px;
+    margin: 0 0 21px;
 
     @include font-setting(42px, 42px, normal, $white);
   }
@@ -295,7 +296,7 @@
   }
 
   .feedback__lesson {
-    padding: 66px 4.0625% 70px 4.0625%;
+    padding: 66px 4.0625% 69px 4.0625%;
   }
 
   .feedback__lesson h3 {

@@ -267,6 +267,12 @@
   .stocks__inner {
     flex-flow: column;
     padding: 45px 0 10px;
+
+
+    @media (min-width: 400px) {
+      width: 368px;
+      margin: 0 auto;
+    }
   }
 
   .stocks__year-promo {
@@ -304,12 +310,9 @@
   }
 
   .stocks__year-promo img {
+    object-fit: fill;
     width: 100%;
     height: 299px;
-
-    @media (min-width: 321px) {
-      height: 100%;
-    }
   }
 
   .stocks__inner ul li {
