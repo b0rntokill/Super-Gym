@@ -281,8 +281,21 @@
     background-color: $red;
   }
 
+  .stocks__year-promo span {
+    text-align: center;
+  }
+
+  .stocks__year-promo b {
+    text-align: center;
+  }
+
   .stocks__year-promo p {
     margin-top: -4px;
+    text-align: center;
+  }
+
+  .stocks__year-promo a {
+    margin: auto 0 0 0;
     text-align: center;
   }
 
@@ -316,6 +329,7 @@
 
   .stocks__inner ul li b {
     margin-bottom: 6px;
+    text-align: center;
   }
 
   .stocks__inner ul li p {
