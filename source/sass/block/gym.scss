@@ -14,9 +14,9 @@
 .gym__title h2 {
   margin: 0 0 10px 0;
   padding: 0;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
-  @include font-setting(49px, 49px, normal, $darknest-blue);
+  @include font-setting(49px, 49px, bold, $darknest-blue);
 
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -71,6 +71,7 @@
     height: 100%;
     background-color: rgba(20, 54, 122, 0.5);
     opacity: 1;
+    transition: 0.6s;
   }
 
   &--overlay:hover::before,
@@ -84,15 +85,15 @@
   top: calc(50% - 50px);
   left: calc(50% - 50px);
   z-index: 1;
+  transition: 0.6s;
 
   &:hover,
   &:focus {
     transform: scale(0.8);
-    opacity: 0.6;
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: 0.6;
   }
 }
 
@@ -122,7 +123,7 @@
   .gym__title h2 {
     margin: 0 0 11px 0;
 
-    @include font-setting(43px, 43px, normal, $darknest-blue);
+    @include font-setting(43px, 43px, bold, $darknest-blue);
 
     text-align: center;
   }
@@ -211,7 +212,7 @@
   .gym__title h2 {
     margin: 0 0 8px 0;
 
-    @include font-setting(32px, 32px, normal, $darknest-blue);
+    @include font-setting(32px, 32px, bold, $darknest-blue);
 
     text-align: left;
   }

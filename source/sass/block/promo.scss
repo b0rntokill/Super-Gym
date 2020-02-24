@@ -16,8 +16,8 @@
 }
 
 .promo__title p {
-  margin: 0;
-  padding: 0;
+  margin: 0 0 5px 0;
+  padding: 0 0 5px 0;
   width: 343px;
   font-family: $default-font;
 
@@ -58,9 +58,9 @@
   margin: 0 21px 0 0;
   padding: 0;
   width: 210px;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
-  @include font-setting(90px, 90px, normal, $white);
+  @include font-setting(90px, 90px, bold, $white);
 
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -141,6 +141,7 @@
 
 .promo picture {
   display: flex;
+  background-color: #000145;
 }
 
 .promo img {
@@ -185,7 +186,7 @@
     margin: 0 21px 0 0;
     width: 120px;
 
-    @include font-setting(52px, 52px, normal, $white);
+    @include font-setting(52px, 52px, bold, $white);
   }
 
   .promo__date {
@@ -256,7 +257,7 @@
   }
 
   .promo__title a {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .promo__description {
@@ -268,7 +269,7 @@
     margin: 0 21px 0 0;
     width: 120px;
 
-    @include font-setting(52px, 52px, normal, $white);
+    @include font-setting(52px, 52px, bold, $white);
   }
 
   .promo__date{

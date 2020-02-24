@@ -60,3 +60,8 @@ a {
     display: block;
   }
 }
+
+
+.no-js .lazyload {
+  display: none;
+}

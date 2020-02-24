@@ -1,7 +1,7 @@
 .feedback {
   display: flex;
   flex-flow: row;
-  margin-top: 50px;
+  margin-top: 60px;
   border-top: 1px solid #74819C;
   background-image: linear-gradient(90deg, $darknest-blue 0%, $darknest-blue 50%, $white 50%, $white 100%);
 }
@@ -26,9 +26,9 @@
 .feedback__lesson h3 {
   margin: 0 0 20px;
   padding: 0;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
-  @include font-setting(49px, 64px, normal, $white);
+  @include font-setting(49px, 64px, bold, $white);
 
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -53,6 +53,8 @@
 
   border: none;
   border-bottom: 1px solid #74819c;
+  appearance: none;
+  border-radius: 0;
   background-color: transparent;
 
   &:nth-of-type(odd) {
@@ -88,6 +90,10 @@
 
   &:focus:-ms-input-placeholder {
     color: transparent
+  }
+
+  &:invalid {
+    box-shadow: none;
   }
 }
 
@@ -134,9 +140,9 @@
 .feedback__contacts h3 {
   margin: 0 0 20px -4px;
   padding: 0;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
-  @include font-setting(49px, 64px, normal, $darknest-blue);
+  @include font-setting(49px, 64px, bold, $darknest-blue);
 
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -212,7 +218,7 @@
 @media (max-width: $desktop-width) {
   .feedback {
     flex-flow: column;
-    margin-top: 40px;
+    margin-top: 50px;
     background-image: linear-gradient(180deg, $darknest-blue 0%, $darknest-blue 50%, $white 50%, $white 100%);
     border: none;
   }
@@ -220,13 +226,13 @@
   .feedback__lesson {
     flex-flow: column;
     width: 100%;
-    padding: 66px 21.2239% 70px 17.3177%;
+    padding: 66px 21.2239% 69px 17.3177%;
   }
 
   .feedback__lesson h3 {
     margin: 0 0 21px;
 
-    @include font-setting(42px, 42px, normal, $white);
+    @include font-setting(42px, 42px, bold, $white);
   }
 
   .feedback__lesson-form input {
@@ -249,7 +255,7 @@
   .feedback__contacts h3 {
     margin: 0 0 20px 0;
 
-    @include font-setting(42px, 42px, normal, $darknest-blue);
+    @include font-setting(42px, 42px, bold, $darknest-blue);
   }
 
   .feedback__contacts ul {
@@ -300,7 +306,7 @@
   }
 
   .feedback__lesson h3 {
-    @include font-setting(32px, 32px, normal, $white);
+    @include font-setting(32px, 32px, bold, $white);
 
     @media (min-width: 400px) {
       text-align: center;
@@ -333,7 +339,7 @@
   }
 
   .feedback__contacts h3 {
-    @include font-setting(32px, 32px, normal, $darknest-blue);
+    @include font-setting(32px, 32px, bold, $darknest-blue);
 
     @media (min-width: 400px) {
       text-align: center;

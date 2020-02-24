@@ -35,7 +35,7 @@
 
 .page-header__top-item a {
   width: 100%;
-  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-family: $bebas-font;
 
   @include font-setting(26px, 26px, normal, $white);
 
@@ -56,9 +56,9 @@
 .page-header__title span {
   margin: 0 0 6px 0;
   padding: 0;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
-  @include font-setting(49px, 49px, normal, $white);
+  @include font-setting(49px, 49px, bold, $white);
 
   text-align: right;
   letter-spacing: 0.03em;
@@ -67,7 +67,7 @@
 
 .page-header__title b {
   width: 310px;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
   @include font-setting(109px, 109px, bold, $white);
 
@@ -215,7 +215,7 @@
   .page-header__title span {
     margin: 0 0 2px 0;
 
-    @include font-setting(34px, 34px, normal, $white);
+    @include font-setting(34px, 34px, bold, $white);
   }
 
   .page-header__title b {
@@ -277,7 +277,7 @@
   .page-header__title span {
     margin: 0 2px 8px 0;
 
-    @include font-setting(28px, 28px, normal, $white);
+    @include font-setting(28px, 28px, bold, $white);
   }
 
   .page-header__title b {

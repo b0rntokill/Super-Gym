@@ -7,9 +7,9 @@
 .trainers h2 {
   margin: 0 0 54px 2px;
   padding: 0;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
-  @include font-setting(49px, 49px, normal, $darknest-blue);
+  @include font-setting(49px, 49px, bold, $darknest-blue);
 
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -45,7 +45,7 @@
 
   &:hover .trainers__slide-inner,
   &:focus .trainers__slide-inner {
-    display: flex;
+    opacity: 1;
   }
 
   &:hover .trainers__name,
@@ -77,13 +77,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
   flex-flow: column;
   width: 100%;
   height: 100%;
   padding: 52px 42px 20px 52px;
   background-color: rgba(16, 38, 84, 0.89);
   box-sizing: border-box;
+  opacity: 0;
+  transition: 0.6s;
 
   @media (max-width: 1365px) {
     padding: 52px 22px 20px 32px;
@@ -192,7 +194,7 @@
   .trainers h2 {
     margin: 0 0 44px 0;
 
-    @include font-setting(42px, 42px, normal, $darknest-blue);
+    @include font-setting(42px, 42px, bold, $darknest-blue);
 
     text-align: center;
   }
@@ -249,7 +251,7 @@
   .trainers h2 {
     margin: 0 0 45px 0;
 
-    @include font-setting(32px, 32px, normal, $darknest-blue);
+    @include font-setting(32px, 32px, bold, $darknest-blue);
   }
 
   .trainers__slider {

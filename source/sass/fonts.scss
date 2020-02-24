@@ -23,9 +23,9 @@
 }
 
 @font-face {
-  font-family: "Bebas Neue Cyrillic";
-  src: local("Bebas Neue Cyrillic"), local("Bebas Neue-Cyrillic"), url("../fonts/BebasNeueCyrillic.woff2") format("woff2"), url("../fonts/BebasNeueCyrillic.woff") format("woff");
-  font-weight: normal;
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Bold"), local("BebasNeue-Bold"), url("../fonts/BebasNeue-Bold.woff2") format("woff2"), url("../fonts/BebasNeue-Bold.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }

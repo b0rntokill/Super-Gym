@@ -7,9 +7,9 @@
 .reviews h2 {
   margin: 0;
   padding: 0;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
-  @include font-setting(49px, 49px, normal, $darknest-blue);
+  @include font-setting(49px, 49px, bold, $darknest-blue);
 
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -21,13 +21,14 @@
   flex-flow: row;
   width: 560px;
   min-height: 242px;
-  padding: 54px 0 0 0;
+  margin: 54px 0 0 0;
   // Стили для свайпера
   margin-left: auto;
   margin-right: auto;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  background-color: $blue;
 }
 
 .reviews__slider-wrapper {
@@ -44,6 +45,7 @@
   flex-flow: row wrap;
   width: 560px;
   min-height: 242px;
+  max-width: auto;
   margin: 0 auto;
   padding: 52px 50px 40px 62px;
   background-color: $blue;
@@ -133,12 +135,12 @@
   }
 
   .reviews h2 {
-    @include font-setting(42px, 42px, normal, $darknest-blue);
+    @include font-setting(42px, 42px, bold, $darknest-blue);
   }
 
   .reviews__slider {
     width: 566px;
-    padding: 44px 0 0 0;
+    margin: 44px auto 0 auto;
   }
 
   .reviews__slider-wrapper {
@@ -176,12 +178,12 @@
   }
 
   .reviews h2 {
-    @include font-setting(32px, 32px, normal, $darknest-blue);
+    @include font-setting(32px, 32px, bold, $darknest-blue);
   }
 
   .reviews__slider {
     width: 226px;
-    padding: 45px 0 0 0;
+    margin: 45px auto 0 auto;
   }
 
   .reviews__slider-wrapper {

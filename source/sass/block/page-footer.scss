@@ -12,7 +12,7 @@
 .page-footer__logo {
   width: 12.9310%;
   margin-right: 16.8103%;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
   @include font-setting(26px, 26px, normal, $white);
 
@@ -117,7 +117,7 @@
     width: 120px;
     margin-right: auto;
 
-    @include font-setting(24px, 24px, normal, $white);
+    @include font-setting(24px, 24px, bold, $white);
   }
 
   .page-footer__nav {
@@ -176,7 +176,7 @@
     margin-right: 0;
     padding-right: 70.4697%;
 
-    @include font-setting(20px, 20px, normal, $white);
+    @include font-setting(20px, 20px, bold, $white);
   }
 
   .page-footer__nav {
@@ -240,7 +240,7 @@
   .page-footer__social-item {
     width: 32px;
     padding-top: 1px;
-    margin-right: 28px;
+    margin-right: 32px;
     margin-bottom: 28px;
 
     &:not(:nth-of-type(3n)) {
@@ -260,7 +260,7 @@
     }
 
     &--vk svg {
-      width: 37px;
+      width: 32px;
       height: 17px;
     }
 
@@ -273,5 +273,10 @@
       width: 14px;
       height: 27px;
     }
+  }
+
+  .page-footer__social-item a {
+  width: 100%;
+  height: 100%;
   }
 }

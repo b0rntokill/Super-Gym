@@ -6,9 +6,9 @@
 .stocks h2 {
   margin: 0;
   padding: 0;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
-  @include font-setting(49px, 49px, normal, $darknest-blue);
+  @include font-setting(49px, 49px, bold, $darknest-blue);
 
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -61,7 +61,7 @@
 .stocks__year-promo p {
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 0 10px 0;
   font-family: $default-font;
 
   @include font-setting(18px, 25px, normal, $white);
@@ -104,6 +104,7 @@
 .stocks__year-promo picture {
   display: flex;
   width: 50%;
+  background: linear-gradient(0deg, #BED8F4, #BED8F4);
 }
 
 .stocks__year-promo img {
@@ -160,7 +161,7 @@
 .stocks__inner ul li p {
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 0 10px 0;
   font-family: $default-font;
 
   @include font-setting(16px, 22px, normal, $blue);
@@ -198,12 +199,12 @@
 
 @media (max-width: $desktop-width) {
   .stocks {
-    padding-top: 96px;
+    padding-top: 78px;
     padding-bottom: 10px;
   }
 
   .stocks h2 {
-    @include font-setting(42px, 42px, normal, $darknest-blue);
+    @include font-setting(42px, 42px, bold, $darknest-blue);
   }
 
   .stocks__inner {
@@ -261,7 +262,7 @@
   }
 
   .stocks h2 {
-    @include font-setting(32px, 32px, normal, $darknest-blue);
+    @include font-setting(32px, 32px, bold, $darknest-blue);
   }
 
   .stocks__inner {

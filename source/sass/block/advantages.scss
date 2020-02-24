@@ -3,9 +3,9 @@
 }
 
 .advantages__wrapper {
-  padding-top: 116px;
-  padding-bottom: 123px;
   width: 100%;
+  padding-top: 116px;
+  padding-bottom: 47px;
 
   @media (max-width: 1365px) {
     padding-left: 2.6%;
@@ -21,9 +21,9 @@
 .advantages__wrapper h2 {
   margin: 0;
   padding: 0;
-  font-family: "Bebas Neue Cyrillic", "Arial", sans-serif;
+  font-family: $bebas-font;
 
-  @include font-setting(49px, 49px, normal, $darknest-blue);
+  @include font-setting(49px, 49px, bold, $darknest-blue);
 
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -31,12 +31,11 @@
 }
 
 .advantages__inner {
-  position: relative;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   justify-content: space-between;
   width: 100%;
-  padding: 64px 60px 40px 60px;
+  padding: 44px 60px 40px 60px;
 
   @media (min-width: 1365px) {
     width: 1160px;
@@ -44,41 +43,44 @@
   }
 }
 
-.advantages__inner ul {
+.advantages__inner-list {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-flow: row;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &--shift {
+    margin-top: -100px;
+  }
+
+  &--border .advantages__inner-item {
+    border-bottom: 2px solid rgba(209, 10, 66, 0.2);
+  }
 }
 
 .advantages__inner-item {
   display: flex;
   flex-flow: row wrap;
   width: 32.6923%;
-  min-height: 161px;
+  min-height: 182px;
+  padding: 21px 0 25px;
 
-  &:nth-of-type(even) {
-    margin-left: 34.6154%;
-  }
-  // Для переполнения
   &:nth-of-type(odd) {
-    margin-right: auto;
+    margin-right: 34.8076%;
   }
 
-  &--layout-shift {
-    align-items: flex-end;
-    padding-bottom: 2px;
+  // Для переполнения
+  &:nth-of-type(3n) {
     border-top: 2px solid rgba(209, 10, 66, 0.2);
   }
 
-  &--designer-mistake-900 {
+  &--layout-shift {
     padding-left: 27px;
   }
 
-  &--designer-mistake-350 {
+  &--designer-mistake {
     padding-left: 20px;
   }
 }
@@ -94,6 +96,11 @@
   &--layout-shift {
     width: 35.2941%;
     margin-right: 8.4%;
+
+    @media (max-width: 1202px) {
+      width: 36.2941%;
+      margin-right: 7.4%;
+    }
   }
 }
 
@@ -159,22 +166,15 @@
 }
 
 .advantages__special {
-  position: absolute;
-  top: 72px;
-  left: 50%;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-content: center;
-  width: 20.6896%;
-  // Если хотим адаптировать его под контейнер списка, то от высоты 100% вычитаем последовательно
-  //  72 (то на сколько его сдвинули от верха элемента в котором он спозиционирован)
-  // 40 (отступ снизу у advantages__inner) и 6 (это сдвиг снизу от границ списка согласно макета)
-  // Магия, теперь можно добавлять элементы списка, все будет хорошо
-  height: calc(100% - 72px - 40px - 6px);
+  width: 23.1730%;
+  min-height: 307px;
+  margin: -154px 0 0 calc(50% - 120px);
   padding: 36px 34px 60px;
   background-color: $blue;
-  transform: translateX(-50%);
 }
 
 .advantages__special b {
@@ -211,151 +211,174 @@
 @media (max-width: $desktop-width) {
   .advantages__wrapper {
     padding-top: 96px;
-    padding-bottom: 9px;
+    padding-bottom: 20px;
   }
 
   .advantages__wrapper h2 {
-    @include font-setting(42px, 42px, normal, $darknest-blue);
+    @include font-setting(42px, 42px, bold, $darknest-blue);
   }
 
   .advantages__inner {
-    padding: 46px 24px 40px 25px;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 32px 0 0 0;
+
+    @media (min-width: 900px) {
+      width: 853px;
+      margin: 0 auto;
+    }
+  }
+
+  .advantages__inner-list {
+    &--shift {
+      margin-top: 0;
+    }
+
+    &--border .advantages__inner-item {
+      border-bottom: none;
+    }
+
+    @media (min-width: 900px) {
+      justify-content: space-between;
+    }
   }
 
   .advantages__inner-item {
-    width: 48%;
-    min-height: 120px;
-
-    &:nth-of-type(even) {
-      margin-left: 0;
-    }
+    width: 46%;
+    padding: 14px 0 25px;
 
     &:nth-of-type(odd) {
-      margin-right: 4%;
+      margin-right: 6%;
     }
 
-    &:nth-of-type(n + 3) {
-      margin-top: 282px;
-    }
-
-    &--layout-shift {
-      align-items: flex-start;
-      padding-bottom: 0;
+    // Для переполнения
+    &:nth-of-type(3n) {
       border-top: none;
     }
 
-    &--designer-mistake-900 {
-      padding-left: 0;
+    &--layout-shift {
+      padding-left: 25px;
     }
 
-    &--designer-mistake-350 {
-      padding-left: 0;
+    &--designer-mistake {
+      padding-left: 25px;
     }
   }
 
   .advantages__facts-short {
-    margin-right: 0;
+    width: 26%;
+    margin-right: 0.5882%;
+    padding: 0;
 
     &--layout-shift {
-      width: 35.2941%;
-      margin-right: 0.6134%;
+      width: 29.8%;
+      margin-right: 8.4%;
     }
   }
 
   .advantages__facts-short b {
-    margin-top: -15px;
-    padding-right: 6.1349%;
+    margin-top: -14px;
 
     @include font-setting(58px, 87px, bold, #2e35ac);
   }
 
   .advantages__facts-short span {
-    margin-top: -17px;
+    margin-top: -18px;
   }
 
   .advantages__facts {
-    // опять ошибки дизайнера, плюс потенциально создается ситуация, со слипанием текста. Выше я ее пытаюсь предотвратить
-    margin-left: -8px;
+    width: 69.7058%;
 
     &--layout-shift {
-      margin-left: 0;
+      width: 59%;
     }
 
     &--layout-shift span {
-      letter-spacing: 0;
+      letter-spacing: -0.02em;
     }
   }
 
   .advantages__facts b {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 
     @include font-setting(20px, 30px, bold, $darknest-blue);
   }
 
-  .advantages__facts span {
-    letter-spacing: -0.015em;
-  }
-
   .advantages__special {
-    justify-content: flex-start;
-    top: 166px;
+    align-items: center;
     width: 60.7142%;
-    height: 239px;
-    padding: 12px 128px 24px;
+    min-height: 239px;
+    margin: -48px 0 28px 19.6428%;
+    padding: 18px 36px 36px;
+    background-color: $blue;
   }
 
   .advantages__special b {
-    margin: 0 0 0 -3px;
+    margin-top: -4px;
 
     @include font-setting(74px, 111px, bold, $white);
   }
 
   .advantages__special span {
-    margin: -18px 0 14px;
+    margin: -17px 0 14px;
 
     @include font-setting(22px, 33px, bold, $white);
+  }
+
+  .advantages__special p {
+    width: 48.6486%;
   }
 }
 
 @media (max-width: $tablet-width) {
   .advantages__wrapper {
     padding-top: 67px;
-    padding-bottom: 3px;
+    padding-bottom: 20px;
+
+    @media (min-width: 500px) {
+      width: 500px;
+    }
   }
 
   .advantages__wrapper h2 {
-    @include font-setting(32px, 32px, normal, $darknest-blue);
+    @include font-setting(32px, 32px, bold, $darknest-blue);
   }
 
   .advantages__inner {
-    padding: 32px 24px 40px 25px;
+    flex-flow: column;
+    padding: 32px 0 0 0;
+  }
+
+  .advantages__inner-list {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 14px 0 10px 0;
   }
 
   .advantages__inner-item {
-    flex-flow: column;
+    flex-flow: row wrap;
+    justify-content: center;
     width: 100%;
-    min-height: 191px;
-
-    &:nth-of-type(even) {
-      margin-left: 0;
-    }
+    margin-bottom: 10px;
+    padding: 0;
 
     &:nth-of-type(odd) {
       margin-right: 0;
     }
 
-    &:nth-of-type(n + 3) {
-      margin-top: 0;
+    &--layout-shift {
+      padding-left: 0;
     }
 
-    &:nth-of-type(2n + 3) {
-      margin-top: 291px;
+    &--designer-mistake {
+      padding-left: 0;
     }
   }
 
   .advantages__facts-short {
     width: 100%;
-    margin-bottom: 5px;
+    margin-right: 0;
+    padding: 0;
 
     &--layout-shift {
       width: 100%;
@@ -364,8 +387,10 @@
   }
 
   .advantages__facts-short b {
-    margin-top: 0;
-    padding-right: 0;
+    margin-top: -14px;
+
+    @include font-setting(58px, 87px, bold, #2e35ac);
+
     text-align: center;
   }
 
@@ -376,34 +401,51 @@
 
   .advantages__facts {
     width: 100%;
-    margin-left: 0;
-    padding: 0 15px;
+    margin-top: -19px;
+
+    &--layout-shift {
+      width:100%;
+    }
+
+    &--layout-shift span {
+      letter-spacing: -0.02em;
+    }
   }
 
   .advantages__facts b {
     margin-bottom: 2px;
+
+    @include font-setting(20px, 30px, bold, $darknest-blue);
+
     text-align: center;
   }
 
   .advantages__facts span {
+    padding: 0 34px;
     text-align: center;
   }
 
   .advantages__special {
-    top: 439px;
-    width: calc(100% + 5.4785%);
-    padding: 20px 74px 24px;
+    width: calc(100% + 5.3125% * 2);
+    margin: 0 0 25px -5.3125%;
+
+    @media (min-width: 500px) {
+      width: 100%;
+      margin: 0 0 25px 0;
+    }
   }
 
   .advantages__special b {
-    margin: 0 0 0 -3px;
-
     @include font-setting(74px, 111px, bold, $white);
   }
 
   .advantages__special span {
-    margin: -24px 0 9px;
+    margin: -25px 0 8px;
 
     @include font-setting(22px, 33px, bold, $white);
+  }
+
+  .advantages__special p {
+    width: 70%;
   }
 }
