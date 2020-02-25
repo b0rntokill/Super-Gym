@@ -15,8 +15,6 @@ body {
   font-family: $default-font;
   background-color: $white;
   min-width: 320px;
-  // Временно
-  // max-width: 1366px;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -60,7 +58,6 @@ a {
     display: block;
   }
 }
-
 
 .no-js .lazyload {
   display: none;
