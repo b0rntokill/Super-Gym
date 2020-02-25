@@ -243,6 +243,10 @@
     margin: 0;
     width: 324px;
     height: 390px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      width: 321px;
+    }
   }
 
   .page-header__social {
