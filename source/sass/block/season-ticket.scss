@@ -71,11 +71,13 @@
   }
 
   &#slide2:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
-    width: 199px;
+    width: 86px;
+    margin-left: 115px;
   }
 
   &#slide3:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
-    width: 100%;
+    width: 96px;
+    margin-left: 245px;
   }
 
   &#slide1:checked ~ .slide1,
@@ -201,6 +203,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -307,7 +310,12 @@
     }
 
     &#slide2:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
-      width: 192px;
+      width: 80px;
+    }
+
+    &#slide3:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
+      width: 86px;
+      margin-left: 246px;
     }
   }
 
@@ -390,8 +398,18 @@
   }
 
   .season-ticket__slider input {
+    &#slide1:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
+      width: 54px;
+    }
+
     &#slide2:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
-      width: 167px;
+      width: 70px;
+      margin-left: 100px;
+    }
+
+    &#slide3:checked ~ .season-ticket__scrollbar .season-ticket__scrollbar-inner {
+      width: 80px;
+      margin-left: 210px;
     }
   }
 

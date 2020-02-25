@@ -86,6 +86,7 @@
   left: calc(50% - 50px);
   z-index: 1;
   transition: 0.6s;
+  cursor: pointer;
 
   &:hover,
   &:focus {

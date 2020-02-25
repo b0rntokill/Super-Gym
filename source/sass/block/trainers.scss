@@ -152,6 +152,7 @@
   border-right: 1px solid #afafaf;
   border-bottom: 1px solid #afafaf;
   transform: rotate(-45deg);
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -173,6 +174,7 @@
   border-left: 1px solid #afafaf;
   border-bottom: 1px solid #afafaf;
   transform: rotate(45deg);
+  cursor: pointer;
 
   &:hover,
   &:focus {

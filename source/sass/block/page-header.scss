@@ -42,6 +42,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   word-wrap: break-word;
+  cursor: pointer;
 }
 
 .page-header__title {
@@ -174,6 +175,7 @@
   @include font-setting(12px, 14px, normal, $white);
 
   text-transform: uppercase;
+  cursor: pointer;
 
   &:hover,
   &:focus {
