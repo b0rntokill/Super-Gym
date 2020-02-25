@@ -247,6 +247,10 @@
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       width: 321px;
     }
+
+    @media (min-width: $tablet-width) {
+      width: 321px;
+    }
   }
 
   .page-header__social {
